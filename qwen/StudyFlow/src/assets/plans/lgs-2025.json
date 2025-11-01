@@ -1,0 +1,104 @@
+{
+  "id": "lgs-2025",
+  "name": "LGS 2025",
+  "description": "2025 LGS sınavı hazırlık planı",
+  "examDate": "2025-06-07",
+  "totalWeeks": 28,
+  "createdAt": "2025-11-01T00:00:00Z",
+  "version": "1.0",
+  
+  "subjects": [
+    {
+      "id": "turkce",
+      "name": "Türkçe",
+      "totalQuestions": 20,
+      "color": "#EF4444",
+      "icon": "📚"
+    },
+    {
+      "id": "matematik",
+      "name": "Matematik",
+      "totalQuestions": 20,
+      "color": "#3B82F6",
+      "icon": "🔢"
+    },
+    {
+      "id": "fen",
+      "name": "Fen Bilimleri",
+      "totalQuestions": 20,
+      "color": "#10B981",
+      "icon": "🔬"
+    },
+    {
+      "id": "tink",
+      "name": "T.C. İnkılap Tarihi",
+      "totalQuestions": 10,
+      "color": "#8B5CF6",
+      "icon": "🏛️"
+    },
+    {
+      "id": "din",
+      "name": "Din Kültürü",
+      "totalQuestions": 10,
+      "color": "#F59E0B",
+      "icon": "⛪"
+    },
+    {
+      "id": "ingilizce",
+      "name": "İngilizce",
+      "totalQuestions": 10,
+      "color": "#6B7280",
+      "icon": "🌐"
+    }
+  ],
+  
+  "stages": [
+    {
+      "id": "stage_1",
+      "name": "Aşama 1: Temel Konular",
+      "description": "Tüm konuların temel düzeyde çalışılması",
+      "startDate": "2025-11-01",
+      "endDate": "2026-01-30",
+      "totalWeeks": 13,
+      "weeklyHours": "6-8",
+      
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "startDate": "2025-11-01",
+          "endDate": "2025-11-07",
+          
+          "days": [
+            {
+              "id": "day_001",
+              "date": "2025-11-05",
+              "dayName": "Salı",
+              "subject": "turkce",
+              "topic": "Fiilimsiler",
+              "description": "Zamir, edat ve bağlaçlar",
+              "duration": 1.5,
+              "targetQuestions": 40,
+              "difficulty": "beginner"
+            },
+            {
+              "id": "day_002",
+              "date": "2025-11-06",
+              "dayName": "Çarşamba",
+              "subject": "matematik",
+              "topic": "Çarpanlar ve Katlar",
+              "description": "Asal çarpanlara ayırma",
+              "duration": 1.5,
+              "targetQuestions": 40,
+              "difficulty": "beginner"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  
+  "tips": [
+    "Her gün en az 100 paragraf sorusu çöz",
+    "Formülleri günlük tekrar et"
+  ]
+}

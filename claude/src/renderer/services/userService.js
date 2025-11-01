@@ -2,17 +2,22 @@ import { v4 as uuidv4 } from 'uuid';
 import storageService from './storageService';
 
 class UserService {
-  getAll() {
-    return storageService.get('users') || [];
+  async getAll() {
+    const users = await storageService.get('users');
+    // Ensure we always return an array
+    if (!users || !Array.isArray(users)) {
+      return [];
+    }
+    return users;
   }
 
-  getById(userId) {
-    const users = this.getAll();
+  async getById(userId) {
+    const users = await this.getAll();
     return users.find(u => u.id === userId) || null;
   }
 
-  create(userData) {
-    const users = this.getAll();
+  async create(userData) {
+    const users = await this.getAll();
 
     const newUser = {
       id: uuidv4(),
@@ -24,16 +29,16 @@ class UserService {
     };
 
     users.push(newUser);
-    storageService.set('users', users);
+    await storageService.set('users', users);
 
     // Initialize user data structure
-    storageService.initializeUser(newUser.id);
+    await storageService.initializeUser(newUser.id);
 
     return newUser;
   }
 
-  update(userId, updates) {
-    const users = this.getAll();
+  async update(userId, updates) {
+    const users = await this.getAll();
     const index = users.findIndex(u => u.id === userId);
 
     if (index === -1) {
@@ -46,23 +51,23 @@ class UserService {
       updatedAt: new Date().toISOString(),
     };
 
-    storageService.set('users', users);
+    await storageService.set('users', users);
     return users[index];
   }
 
-  delete(userId) {
-    const users = this.getAll();
+  async delete(userId) {
+    const users = await this.getAll();
     const filtered = users.filter(u => u.id !== userId);
-    storageService.set('users', filtered);
+    await storageService.set('users', filtered);
 
     // Delete user data
-    storageService.deleteUserData(userId);
+    await storageService.deleteUserData(userId);
 
     return true;
   }
 
-  updateLastActive(userId) {
-    return this.update(userId, {
+  async updateLastActive(userId) {
+    return await this.update(userId, {
       lastActive: new Date().toISOString(),
     });
   }

@@ -15,16 +15,8 @@ const Modal = ({ isOpen, onClose, children, size = 'md', closeOnBackdropClick = 
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
       document.body.style.overflow = 'hidden';
-
-      // Focus trap - focus first focusable element
-      setTimeout(() => {
-        const focusableElements = modalRef.current?.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        if (focusableElements && focusableElements.length > 0) {
-          focusableElements[0].focus();
-        }
-      }, 100);
+    } else {
+      document.body.style.overflow = 'unset';
     }
 
     return () => {
