@@ -52,7 +52,7 @@ Bu klasörde StudyFlow uygulamasında kullanabileceğiniz örnek çalışma plan
 
 ---
 
-### 2. KPSS 2026 Ortaöğretim Hazırlık Planı
+### 2. KPSS 2026 Ortaöğretim Hazırlık Planı (Genel)
 **Dosya:** `kpss-2026-ornek-plan.json`
 
 **Özellikleri:**
@@ -76,6 +76,43 @@ Bu klasörde StudyFlow uygulamasında kullanabileceğiniz örnek çalışma plan
 - ✅ Hız çalışması ve zaman yönetimi teknikleri
 - ✅ Sınav stratejisi geliştirme
 - ✅ Son haftalarda moral ve motivasyon odaklı çalışma
+
+---
+
+### 3. KPSS 2026 Ortaöğretim Detaylı Plan (PDF'den)
+**Dosya:** `kpss-2026-detayli-plan.json`
+
+**Özellikleri:**
+- **Toplam Süre:** 32 hafta (192 gün detaylı program)
+- **Sınav Tarihi:** 12 Temmuz 2026
+- **Dersler:** Türkçe, Matematik, Tarih, Coğrafya, Vatandaşlık
+- **Aşamalar:**
+  - Aşama 1: Temel Kavramlar (8 hafta)
+  - Aşama 2: İleri Konular (8 hafta)
+  - Aşama 3: Pekiştirme ve Deneme (8 hafta)
+  - Aşama 4: Final Sprint (8 hafta)
+
+**Haftalık Program:**
+- Pazartesi-Cumartesi arası çalışma
+- Günlük 0.5-3 saat arası çalışma
+- Her hafta farklı konu kombinasyonları
+- Düzenli deneme sınavları ve detaylı analiz
+
+**Öne Çıkan Özellikler:**
+- ✅ **En detaylı plan** - Her gün için özel konu başlıkları
+- ✅ Pedagojik olarak sıralı konu akışı
+- ✅ Türkçe: Ses bilgisi → Yapı bilgisi → Anlam bilgisi → Paragraf
+- ✅ Matematik: Temel kavramlar → Geometri → Problemler → Mantık
+- ✅ Tarih: Kronolojik sıralama (İlk Çağ → Cumhuriyet)
+- ✅ Deneme sınavları sonrası detaylı analiz günleri
+- ✅ Hız çalışması teknikleri ve stratejik soru seçimi
+- ✅ Son 2 hafta tam dinlenme ve moral artırma odaklı
+
+**Kimler İçin Uygun:**
+- Sıfırdan başlayanlar için ideal
+- Konuları sistematik öğrenmek isteyenler
+- Günlük ne çalışacağını bilemeyenler
+- Detaylı yol haritası arayanlar
 
 ---
 
