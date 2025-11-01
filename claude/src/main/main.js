@@ -1,8 +1,23 @@
 import { app, BrowserWindow, ipcMain, dialog } from 'electron';
 import { join } from 'path';
 import { readFile, writeFile } from 'fs/promises';
+import Store from 'electron-store';
 
-const isDev = process.env.NODE_ENV === 'development';
+// Check if running in development mode
+const isDev = !app.isPackaged;
+
+// Initialize electron-store
+const store = new Store({
+  name: 'studyflow-data',
+  defaults: {
+    users: [],
+    plans: [],
+    settings: {
+      theme: 'light',
+      language: 'tr',
+    },
+  },
+});
 
 let mainWindow = null;
 
@@ -89,5 +104,63 @@ ipcMain.handle('save-file-dialog', async (event, defaultPath) => {
     return { success: true, data: result };
   } catch (error) {
     return { success: false, error: error.message };
+  }
+});
+
+// Storage IPC Handlers
+ipcMain.handle('store-get', async (event, key) => {
+  try {
+    return store.get(key);
+  } catch (error) {
+    console.error('Store get error:', error);
+    return undefined;
+  }
+});
+
+ipcMain.handle('store-set', async (event, key, value) => {
+  try {
+    store.set(key, value);
+    return true;
+  } catch (error) {
+    console.error('Store set error:', error);
+    return false;
+  }
+});
+
+ipcMain.handle('store-delete', async (event, key) => {
+  try {
+    store.delete(key);
+    return true;
+  } catch (error) {
+    console.error('Store delete error:', error);
+    return false;
+  }
+});
+
+ipcMain.handle('store-has', async (event, key) => {
+  try {
+    return store.has(key);
+  } catch (error) {
+    console.error('Store has error:', error);
+    return false;
+  }
+});
+
+ipcMain.handle('store-clear', async () => {
+  try {
+    store.clear();
+    return true;
+  } catch (error) {
+    console.error('Store clear error:', error);
+    return false;
+  }
+});
+
+ipcMain.handle('store-get-all', async () => {
+  try {
+    return store.store;
+  } catch (error) {
+    console.error('Store get-all error:', error);
+    return {};
   }
 });

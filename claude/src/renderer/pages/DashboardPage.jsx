@@ -4,6 +4,7 @@ import TodayProgram from '../components/dashboard/TodayProgram';
 import WeeklySummary from '../components/dashboard/WeeklySummary';
 import ExamCountdown from '../components/dashboard/ExamCountdown';
 import QuickActions from '../components/dashboard/QuickActions';
+import ExamStats from '../components/dashboard/ExamStats';
 
 const DashboardPage = () => {
   const { currentUser } = useUser();
@@ -29,6 +30,7 @@ const DashboardPage = () => {
         {/* Right Column - Stats and Actions */}
         <div className="space-y-6">
           <ExamCountdown />
+          <ExamStats />
           <QuickActions />
         </div>
       </div>
