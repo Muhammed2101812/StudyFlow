@@ -1,12 +1,24 @@
 import React from 'react';
 import clsx from 'clsx';
 
-const Card = ({ children, className, hover = false }) => {
+const Card = ({ children, className, hover = false, onClick }) => {
+  const isClickable = !!onClick;
+
   return (
     <div
+      onClick={onClick}
+      role={isClickable ? 'button' : undefined}
+      tabIndex={isClickable ? 0 : undefined}
+      onKeyDown={isClickable ? (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick?.(e);
+        }
+      } : undefined}
       className={clsx(
-        'bg-white rounded-lg shadow-sm border border-gray-200',
-        hover && 'hover:shadow-md transition-shadow duration-200',
+        'bg-white rounded-lg shadow-sm border border-gray-200 transition-all duration-200',
+        (hover || isClickable) && 'hover:shadow-lg hover:-translate-y-0.5',
+        isClickable && 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
         className
       )}
     >

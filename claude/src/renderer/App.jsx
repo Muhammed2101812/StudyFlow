@@ -3,19 +3,22 @@ import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './contexts/UserContext';
 import { PlanProvider } from './contexts/PlanContext';
 import { ToastProvider } from './contexts/ToastContext';
+import ErrorBoundary from './components/common/ErrorBoundary';
 import AppRouter from './router';
 
 function App() {
   return (
-    <BrowserRouter>
-      <ToastProvider>
-        <UserProvider>
-          <PlanProvider>
-            <AppRouter />
-          </PlanProvider>
-        </UserProvider>
-      </ToastProvider>
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <ToastProvider>
+          <UserProvider>
+            <PlanProvider>
+              <AppRouter />
+            </PlanProvider>
+          </UserProvider>
+        </ToastProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   );
 }
 

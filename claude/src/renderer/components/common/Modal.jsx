@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import clsx from 'clsx';
 
-const Modal = ({ isOpen, onClose, children, size = 'md' }) => {
+const Modal = ({ isOpen, onClose, children, size = 'md', closeOnBackdropClick = true }) => {
+  const modalRef = useRef(null);
+
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
@@ -13,6 +15,16 @@ const Modal = ({ isOpen, onClose, children, size = 'md' }) => {
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
       document.body.style.overflow = 'hidden';
+
+      // Focus trap - focus first focusable element
+      setTimeout(() => {
+        const focusableElements = modalRef.current?.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusableElements && focusableElements.length > 0) {
+          focusableElements[0].focus();
+        }
+      }, 100);
     }
 
     return () => {
@@ -30,19 +42,32 @@ const Modal = ({ isOpen, onClose, children, size = 'md' }) => {
     xl: 'max-w-4xl',
   };
 
+  const handleBackdropClick = () => {
+    if (closeOnBackdropClick) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      {/* Backdrop */}
+    <div
+      className="fixed inset-0 z-50 overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      {/* Backdrop with fade-in animation */}
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
-        onClick={onClose}
+        className="fixed inset-0 bg-black bg-opacity-50 fade-in"
+        onClick={handleBackdropClick}
+        aria-hidden="true"
       />
 
-      {/* Modal */}
+      {/* Modal with scale-in animation */}
       <div className="flex min-h-full items-center justify-center p-4">
         <div
+          ref={modalRef}
           className={clsx(
-            'relative bg-white rounded-lg shadow-xl w-full fade-in',
+            'relative bg-white rounded-lg shadow-xl w-full scale-in',
             sizes[size]
           )}
           onClick={(e) => e.stopPropagation()}
@@ -57,11 +82,12 @@ const Modal = ({ isOpen, onClose, children, size = 'md' }) => {
 const ModalHeader = ({ children, onClose }) => {
   return (
     <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-      <h3 className="text-lg font-semibold text-gray-900">{children}</h3>
+      <h3 id="modal-title" className="text-lg font-semibold text-gray-900">{children}</h3>
       {onClose && (
         <button
           onClick={onClose}
-          className="text-gray-400 hover:text-gray-600 transition-colors"
+          className="text-gray-400 hover:text-gray-600 transition-colors focus-ring rounded"
+          aria-label="Close modal"
         >
           <X size={20} />
         </button>
