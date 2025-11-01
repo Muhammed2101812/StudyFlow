@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../hooks/useUser';
+import { useToast } from '../contexts/ToastContext';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import Modal from '../components/common/Modal';
@@ -12,6 +13,7 @@ import clsx from 'clsx';
 
 const UserSelectPage = () => {
   const { users, switchUser, createUser } = useUser();
+  const { toast } = useToast();
   const navigate = useNavigate();
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [newUserName, setNewUserName] = useState('');
@@ -21,7 +23,10 @@ const UserSelectPage = () => {
   const handleSelectUser = async (userId) => {
     const result = await switchUser(userId);
     if (result.success) {
+      toast.success('Kullanıcı değiştirildi');
       navigate('/');
+    } else {
+      toast.error(result.error || 'Kullanıcı değiştirilemedi');
     }
   };
 
@@ -38,10 +43,15 @@ const UserSelectPage = () => {
     });
 
     if (result.success) {
+      toast.success('Kullanıcı oluşturuldu!');
       setShowCreateModal(false);
+      setNewUserName('');
+      setSelectedAvatar(AVATAR_OPTIONS[0]);
+      setError('');
       navigate('/');
     } else {
       setError(result.error);
+      toast.error(result.error || 'Kullanıcı oluşturulamadı');
     }
   };
 
