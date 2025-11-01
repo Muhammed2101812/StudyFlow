@@ -12,10 +12,10 @@
 ## 📊 İlerleme Özeti
 
 - **Toplam Görev:** 150
-- **Tamamlanan:** 75
+- **Tamamlanan:** 95
 - **Devam Eden:** 0
-- **Bekleyen:** 75
-- **İlerleme:** ██████████░░░░░░░░░░ 50%
+- **Bekleyen:** 55
+- **İlerleme:** ████████████░░░░░░░░ 63%
 
 ---
 
@@ -28,7 +28,7 @@
 | Sprint 3 | 🟢 Tamamlandı | 16 | 16 | 100% |
 | Sprint 4 | 🟢 Tamamlandı | 20 | 20 | 100% |
 | Sprint 5 | 🟢 Tamamlandı | 22 | 22 | 100% |
-| Sprint 6 | 🔴 Bekliyor | 20 | 0 | 0% |
+| Sprint 6 | 🟢 Tamamlandı | 20 | 20 | 100% |
 | Sprint 7 | 🔴 Bekliyor | 15 | 0 | 0% |
 | Sprint 8 | 🔴 Bekliyor | 8 | 0 | 0% |
 | Sprint 9 | 🔴 Bekliyor | 4 | 0 | 0% |
@@ -1079,9 +1079,21 @@
 
 # 📊 SPRINT 6: Deneme Sınavları
 
-**Hedef:** Deneme ekle/görüntüle/analiz et  
-**Tahmini Süre:** 10 saat  
-**Durum:** 🔴 Bekliyor
+**Hedef:** Deneme ekle/görüntüle/analiz et
+**Tahmini Süre:** 10 saat
+**Durum:** 🟢 Tamamlandı
+
+**Tamamlanan İşler:**
+- ✅ examService.js: Full CRUD, summary calculations, trend analysis
+- ✅ ExamForm: Multi-section form with subject results and auto net calculation
+- ✅ ExamList: Sortable list with statistics and detail modal
+- ✅ ExamChart: Line chart (progress) and bar chart (subject comparison)
+- ✅ WeakTopicsAnalysis: Frequency analysis of weak topics
+- ✅ ExamStats dashboard widget
+- ✅ useExams custom hook
+- ✅ constants.js: SUBJECT_COLORS and SUBJECT_QUESTIONS
+
+**Git Commit:** `b715a85 - feat: Complete Sprint 6 - Mock Exam System`
 
 ## 6.1 Exam Service Implementation
 
