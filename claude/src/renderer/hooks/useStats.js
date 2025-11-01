@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useUser } from '../contexts/UserContext';
+import { useUser } from './useUser';
 import statsService from '../services/statsService';
 
 export function useStats(dateRange = null) {

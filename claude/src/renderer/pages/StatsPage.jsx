@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Download, RefreshCw } from 'lucide-react';
-import { useUser } from '../contexts/UserContext';
+import { useUser } from '../hooks/useUser';
 import { useToast } from '../contexts/ToastContext';
 import useStats from '../hooks/useStats';
 import exportService from '../services/exportService';
