@@ -8,6 +8,140 @@
 
 ## Bugs Found During Initial Testing
 
+### Bug #2: Critical - Input Focus Lost on Every Keystroke ✅ FIXED
+
+**Severity:** Critical (User Cannot Enter Name)
+**Status:** Fixed
+**Date Found:** 01 Kasım 2025
+**Date Fixed:** 01 Kasım 2025
+**Reported By:** User (Manual Testing)
+
+**Description:**
+When typing in the "Yeni Kullanıcı" modal name input, focus is lost after every keystroke. User cannot type complete names (e.g., typing "muhammed" only allows "m" before focus is lost).
+
+**Root Cause:**
+Modal component's useEffect was automatically focusing the first focusable element (close button) on every re-render. State changes (typing) triggered re-renders, which re-triggered the focus trap.
+
+**File Affected:**
+`src/renderer/components/common/Modal.jsx` - Lines 19-27
+
+**Fix Applied:**
+Removed the automatic focus trap from useEffect. Focus management is now handled naturally by the browser.
+
+**Before:**
+```javascript
+// Focus trap - focus first focusable element
+setTimeout(() => {
+  const focusableElements = modalRef.current?.querySelectorAll(...);
+  if (focusableElements && focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}, 100);
+```
+
+**After:**
+```javascript
+// Removed automatic focus - browser handles it naturally
+```
+
+**Testing:**
+- [x] User can now type complete names without interruption
+- [x] Modal still responds to ESC key
+- [x] No focus issues reported
+
+---
+
+### Bug #3: Critical - 'users.push is not a function' Error ✅ FIXED
+
+**Severity:** Critical (Cannot Create Users)
+**Status:** Fixed
+**Date Found:** 01 Kasım 2025
+**Date Fixed:** 01 Kasım 2025
+**Reported By:** User (Manual Testing)
+
+**Description:**
+When clicking "Oluştur" button after entering user details, error occurs:
+```
+TypeError: users.push is not a function
+```
+
+**Root Cause:**
+1. UserService methods were not async, but called async storageService
+2. storageService.get() could return undefined or non-array values
+3. No type validation on returned data
+
+**Files Affected:**
+`src/renderer/services/userService.js` - All methods
+
+**Fix Applied:**
+1. Made all userService methods async
+2. Added array type validation in getAll()
+3. Fixed async/await chain throughout the service
+
+**Changes:**
+- `getAll()` → `async getAll()` with array validation
+- `getById()` → `async getById()`
+- `create()` → `async create()` with await calls
+- `update()` → `async update()` with await calls
+- `delete()` → `async delete()` with await calls
+- `updateLastActive()` → `async updateLastActive()`
+
+**Testing:**
+- [x] Users can be created successfully
+- [x] No push() errors
+- [x] Data persists correctly
+- [x] All CRUD operations work
+
+---
+
+### Bug #4: Critical - 'exams is not iterable' Error ✅ FIXED
+
+**Severity:** Critical (Dashboard Crash)
+**Status:** Fixed
+**Date Found:** 01 Kasım 2025
+**Date Fixed:** 01 Kasım 2025
+**Reported By:** User (Manual Testing)
+
+**Description:**
+When creating a user and navigating to Dashboard, application crashes with:
+```
+TypeError: exams is not iterable
+at ExamStats component
+```
+
+**Root Cause:**
+examService methods (getAll, save, update, delete, etc.) were not async but called async storageService methods without await. This caused undefined/null values to be returned instead of arrays.
+
+**Files Affected:**
+- `src/renderer/services/examService.js` - All methods
+- `src/renderer/hooks/useExams.js` - Line 43
+
+**Fix Applied:**
+1. Made all examService methods async
+2. Changed from `storageService.get/set` to `getUserData/setUserData`
+3. Added array validation with fallbacks
+4. Added safety check in useExams hook
+
+**Methods Fixed:**
+- `getAll()` → `async getAll()`
+- `getById()` → `async getById()`
+- `save()` → `async save()`
+- `update()` → `async update()`
+- `delete()` → `async delete()`
+- `getTrendData()` → `async getTrendData()`
+- `getSubjectAnalysis()` → `async getSubjectAnalysis()`
+- `getWeakTopics()` → `async getWeakTopics()`
+
+**Testing:**
+- [x] Dashboard loads without crash
+- [x] Empty exams state handled correctly
+- [x] ExamStats component renders
+- [x] User creation + navigation works
+
+---
+
+## Bugs Found During Initial Testing
+
 ### Bug #1: Critical - Import Path Error for useUser Hook ✅ FIXED
 
 **Severity:** Critical (Application Breaking)
@@ -140,9 +274,11 @@ ReferenceError: dragEvent is not defined
 | Bug # | Severity | Status | Files Modified | Testing Status |
 |-------|----------|--------|----------------|----------------|
 | 1 | Critical | Fixed | 2 files | Verified |
-| - | - | - | - | - |
+| 2 | Critical | Fixed | 1 file | Verified |
+| 3 | Critical | Fixed | 1 file | Verified |
+| 4 | Critical | Fixed | 2 files | Verified |
 
-**Total Bugs Fixed:** 1 Critical
+**Total Bugs Fixed:** 4 Critical
 **Total Warnings:** 2 Low priority
 
 ---
