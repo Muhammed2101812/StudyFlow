@@ -2,19 +2,24 @@ import storageService from './storageService';
 import { format } from 'date-fns';
 
 class ProgressService {
-  getAll(userId) {
-    return storageService.getUserData(userId, 'progress') || [];
+  async getAll(userId) {
+    const progress = await storageService.getUserData(userId, 'progress');
+    // Ensure we always return an array
+    if (!progress || !Array.isArray(progress)) {
+      return [];
+    }
+    return progress;
   }
 
-  getByDate(userId, date) {
+  async getByDate(userId, date) {
     const dateStr = format(new Date(date), 'yyyy-MM-dd');
-    const allProgress = this.getAll(userId);
+    const allProgress = await this.getAll(userId);
     return allProgress.find(p => p.date === dateStr) || null;
   }
 
-  saveStudyLog(userId, logData) {
+  async saveStudyLog(userId, logData) {
     try {
-      const allProgress = this.getAll(userId);
+      const allProgress = await this.getAll(userId);
       const dateStr = format(new Date(logData.date), 'yyyy-MM-dd');
 
       // Check if entry already exists for this date
@@ -46,16 +51,16 @@ class ProgressService {
       // Sort by date (newest first)
       allProgress.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-      storageService.setUserData(userId, 'progress', allProgress);
+      await storageService.setUserData(userId, 'progress', allProgress);
       return studyLog;
     } catch (error) {
       throw new Error(`Çalışma kaydedilemedi: ${error.message}`);
     }
   }
 
-  updateStudyLog(userId, date, updates) {
+  async updateStudyLog(userId, date, updates) {
     try {
-      const allProgress = this.getAll(userId);
+      const allProgress = await this.getAll(userId);
       const dateStr = format(new Date(date), 'yyyy-MM-dd');
       const index = allProgress.findIndex(p => p.date === dateStr);
 
@@ -69,28 +74,28 @@ class ProgressService {
         updatedAt: new Date().toISOString(),
       };
 
-      storageService.setUserData(userId, 'progress', allProgress);
+      await storageService.setUserData(userId, 'progress', allProgress);
       return allProgress[index];
     } catch (error) {
       throw new Error(`Çalışma güncellenemedi: ${error.message}`);
     }
   }
 
-  deleteStudyLog(userId, date) {
+  async deleteStudyLog(userId, date) {
     try {
-      const allProgress = this.getAll(userId);
+      const allProgress = await this.getAll(userId);
       const dateStr = format(new Date(date), 'yyyy-MM-dd');
       const filtered = allProgress.filter(p => p.date !== dateStr);
 
-      storageService.setUserData(userId, 'progress', filtered);
+      await storageService.setUserData(userId, 'progress', filtered);
       return true;
     } catch (error) {
       throw new Error(`Çalışma silinemedi: ${error.message}`);
     }
   }
 
-  calculateSummary(userId) {
-    const allProgress = this.getAll(userId);
+  async calculateSummary(userId) {
+    const allProgress = await this.getAll(userId);
 
     const summary = {
       totalHours: 0,
@@ -168,8 +173,8 @@ class ProgressService {
     return { current: currentStreak, longest: longestStreak };
   }
 
-  getSubjectStats(userId, subject) {
-    const allProgress = this.getAll(userId);
+  async getSubjectStats(userId, subject) {
+    const allProgress = await this.getAll(userId);
 
     const stats = {
       totalQuestions: 0,

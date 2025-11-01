@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useUser } from './useUser';
 import progressService from '../services/progressService';
+import { format } from 'date-fns';
 
 export const useProgress = () => {
   const { currentUser } = useUser();
@@ -14,13 +15,13 @@ export const useProgress = () => {
     }
   }, [currentUser]);
 
-  const loadProgress = () => {
+  const loadProgress = async () => {
     if (!currentUser) return;
 
     setLoading(true);
     try {
-      const allProgress = progressService.getAll(currentUser.id);
-      const summaryData = progressService.calculateSummary(currentUser.id);
+      const allProgress = await progressService.getAll(currentUser.id);
+      const summaryData = await progressService.calculateSummary(currentUser.id);
 
       setProgress(allProgress);
       setSummary(summaryData);
@@ -37,8 +38,8 @@ export const useProgress = () => {
     }
 
     try {
-      const saved = progressService.saveStudyLog(currentUser.id, logData);
-      loadProgress(); // Refresh data
+      const saved = await progressService.saveStudyLog(currentUser.id, logData);
+      await loadProgress(); // Refresh data
       return { success: true, data: saved };
     } catch (error) {
       return { success: false, error: error.message };
@@ -51,8 +52,8 @@ export const useProgress = () => {
     }
 
     try {
-      const updated = progressService.updateStudyLog(currentUser.id, date, updates);
-      loadProgress(); // Refresh data
+      const updated = await progressService.updateStudyLog(currentUser.id, date, updates);
+      await loadProgress(); // Refresh data
       return { success: true, data: updated };
     } catch (error) {
       return { success: false, error: error.message };
@@ -65,8 +66,8 @@ export const useProgress = () => {
     }
 
     try {
-      progressService.deleteStudyLog(currentUser.id, date);
-      loadProgress(); // Refresh data
+      await progressService.deleteStudyLog(currentUser.id, date);
+      await loadProgress(); // Refresh data
       return { success: true };
     } catch (error) {
       return { success: false, error: error.message };
@@ -74,13 +75,15 @@ export const useProgress = () => {
   };
 
   const getByDate = (date) => {
-    if (!currentUser) return null;
-    return progressService.getByDate(currentUser.id, date);
+    if (!currentUser || !progress) return null;
+    // Search through already-loaded progress array
+    const dateStr = date instanceof Date ? format(date, 'yyyy-MM-dd') : date;
+    return progress.find(p => p.date === dateStr) || null;
   };
 
-  const getSubjectStats = (subject) => {
+  const getSubjectStats = async (subject) => {
     if (!currentUser) return null;
-    return progressService.getSubjectStats(currentUser.id, subject);
+    return await progressService.getSubjectStats(currentUser.id, subject);
   };
 
   return {

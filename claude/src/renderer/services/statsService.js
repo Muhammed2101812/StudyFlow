@@ -18,9 +18,12 @@ class StatsService {
   /**
    * Get overview statistics for a user
    */
-  getOverview(userId, dateRange = null) {
-    const progress = progressService.getAll(userId);
-    const exams = examService.getAll(userId);
+  async getOverview(userId, dateRange = null) {
+    const progressResponse = await progressService.getAll(userId);
+    const examsResponse = await examService.getAll(userId);
+
+    const progress = Array.isArray(progressResponse) ? progressResponse : [];
+    const exams = Array.isArray(examsResponse?.data) ? examsResponse.data : [];
 
     // Filter by date range if provided
     const filteredProgress = dateRange
@@ -74,9 +77,12 @@ class StatsService {
   /**
    * Get subject-specific statistics
    */
-  getSubjectStats(userId, dateRange = null) {
-    const progress = progressService.getAll(userId);
-    const exams = examService.getAll(userId);
+  async getSubjectStats(userId, dateRange = null) {
+    const progressResponse = await progressService.getAll(userId);
+    const examsResponse = await examService.getAll(userId);
+
+    const progress = Array.isArray(progressResponse) ? progressResponse : [];
+    const exams = Array.isArray(examsResponse?.data) ? examsResponse.data : [];
 
     const filteredProgress = dateRange
       ? this._filterByDateRange(progress, dateRange)
@@ -160,8 +166,9 @@ class StatsService {
   /**
    * Get trend data for charts
    */
-  getTrendData(userId, groupBy = 'week') {
-    const exams = examService.getAll(userId);
+  async getTrendData(userId, groupBy = 'week') {
+    const examsResponse = await examService.getAll(userId);
+    const exams = Array.isArray(examsResponse?.data) ? examsResponse.data : [];
 
     if (exams.length === 0) {
       return [];
@@ -190,8 +197,9 @@ class StatsService {
   /**
    * Get weekly statistics
    */
-  getWeeklyStats(userId) {
-    const progress = progressService.getAll(userId);
+  async getWeeklyStats(userId) {
+    const progressResponse = await progressService.getAll(userId);
+    const progress = Array.isArray(progressResponse) ? progressResponse : [];
     const now = new Date();
     const weekStart = startOfWeek(now, { weekStartsOn: 1 }); // Monday
     const weekEnd = endOfWeek(now, { weekStartsOn: 1 });
@@ -216,8 +224,9 @@ class StatsService {
   /**
    * Get monthly statistics
    */
-  getMonthlyStats(userId) {
-    const progress = progressService.getAll(userId);
+  async getMonthlyStats(userId) {
+    const progressResponse = await progressService.getAll(userId);
+    const progress = Array.isArray(progressResponse) ? progressResponse : [];
     const now = new Date();
     const monthStart = startOfMonth(now);
     const monthEnd = endOfMonth(now);
@@ -241,8 +250,9 @@ class StatsService {
   /**
    * Get weak topics analysis
    */
-  getWeakTopics(userId) {
-    const exams = examService.getAll(userId);
+  async getWeakTopics(userId) {
+    const examsResponse = await examService.getAll(userId);
+    const exams = Array.isArray(examsResponse?.data) ? examsResponse.data : [];
     const topicsMap = new Map();
 
     exams.forEach(exam => {

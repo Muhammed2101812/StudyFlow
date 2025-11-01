@@ -8,6 +8,89 @@
 
 ## Bugs Found During Initial Testing
 
+### Bug #5: Critical - 'allProgress.find is not a function' Error ✅ FIXED
+
+**Severity:** Critical (Study Log Page Crash)
+**Status:** Fixed
+**Date Found:** 01 Kasım 2025
+**Date Fixed:** 01 Kasım 2025
+**Reported By:** User (Manual Testing)
+
+**Description:**
+When navigating to "Çalışma Günlüğü" (Study Log) page after creating a user, application crashes with:
+```
+TypeError: allProgress.find is not a function
+at StudyLogPage (line 30:60)
+```
+
+**Root Cause:**
+progressService methods were not async but called async storageService. This caused undefined/null values to be returned instead of arrays. The useProgress hook was also calling progressService methods without await.
+
+**Files Affected:**
+- `src/renderer/services/progressService.js` - All 6 methods
+- `src/renderer/hooks/useProgress.js` - loadProgress and service call methods
+
+**Fix Applied:**
+1. Made all progressService methods async:
+   - `getAll()` → `async getAll()` with array validation
+   - `getByDate()` → `async getByDate()`
+   - `saveStudyLog()` → `async saveStudyLog()`
+   - `updateStudyLog()` → `async updateStudyLog()`
+   - `deleteStudyLog()` → `async deleteStudyLog()`
+   - `calculateSummary()` → `async calculateSummary()`
+   - `getSubjectStats()` → `async getSubjectStats()`
+
+2. Updated useProgress hook to properly await all service calls
+3. Made getByDate synchronous by searching through already-loaded progress array
+
+**Testing:**
+- [x] Study Log page loads without crash
+- [x] Empty progress state handled correctly
+- [x] Progress data loads properly
+
+---
+
+### Bug #6: Critical - 'filteredProgress.reduce is not a function' Error ✅ FIXED
+
+**Severity:** Critical (Statistics Page Crash)
+**Status:** Fixed
+**Date Found:** 01 Kasım 2025
+**Date Fixed:** 01 Kasım 2025
+**Reported By:** User (Manual Testing)
+
+**Description:**
+When navigating to "İstatistikler" (Statistics) page, application crashes with:
+```
+TypeError: filteredProgress.reduce is not a function
+at StatsService.getOverview (statsService.js:35:41)
+```
+
+**Root Cause:**
+statsService was calling async progressService.getAll() and examService.getAll() without await. The useStats hook was also using useMemo instead of useEffect for async operations.
+
+**Files Affected:**
+- `src/renderer/services/statsService.js` - All 6 methods
+- `src/renderer/hooks/useStats.js` - Complete refactor from useMemo to useEffect
+
+**Fix Applied:**
+1. Made all statsService methods async and added proper await:
+   - `getOverview()` → `async getOverview()`
+   - `getSubjectStats()` → `async getSubjectStats()`
+   - `getTrendData()` → `async getTrendData()`
+   - `getWeeklyStats()` → `async getWeeklyStats()`
+   - `getMonthlyStats()` → `async getMonthlyStats()`
+   - `getWeakTopics()` → `async getWeakTopics()`
+
+2. Added array validation for service responses
+3. Refactored useStats hook from useMemo to useEffect pattern for proper async handling
+
+**Testing:**
+- [x] Statistics page loads without crash
+- [x] Empty data handled correctly
+- [x] All stat calculations work properly
+
+---
+
 ### Bug #2: Critical - Input Focus Lost on Every Keystroke ✅ FIXED
 
 **Severity:** Critical (User Cannot Enter Name)
@@ -277,9 +360,11 @@ ReferenceError: dragEvent is not defined
 | 2 | Critical | Fixed | 1 file | Verified |
 | 3 | Critical | Fixed | 1 file | Verified |
 | 4 | Critical | Fixed | 2 files | Verified |
+| 5 | Critical | Fixed | 2 files | Pending verification |
+| 6 | Critical | Fixed | 2 files | Pending verification |
 
-**Total Bugs Fixed:** 4 Critical
-**Total Warnings:** 2 Low priority
+**Total Bugs Fixed:** 6 Critical
+**Total Warnings:** 3 Low priority
 
 ---
 
@@ -336,6 +421,6 @@ After fixes, verify:
 
 ---
 
-**Last Updated:** 01 Kasım 2025 21:13
+**Last Updated:** 01 Kasım 2025 21:50
 **Updated By:** Claude Code
-**Next Update:** After manual testing completion
+**Next Update:** After manual testing verification of Bugs #5 and #6
