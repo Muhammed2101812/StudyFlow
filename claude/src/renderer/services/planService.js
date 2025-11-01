@@ -2,12 +2,17 @@ import storageService from './storageService';
 import userService from './userService';
 
 class PlanService {
-  getAll() {
-    return storageService.get('plans') || [];
+  async getAll() {
+    const plans = await storageService.get('plans');
+    // Ensure we always return an array
+    if (!plans || !Array.isArray(plans)) {
+      return [];
+    }
+    return plans;
   }
 
-  getById(planId) {
-    const plans = this.getAll();
+  async getById(planId) {
+    const plans = await this.getAll();
     return plans.find(p => p.id === planId) || null;
   }
 
@@ -26,9 +31,9 @@ class PlanService {
       this.validate(planData);
 
       // Save plan
-      const plans = this.getAll();
+      const plans = await this.getAll();
       plans.push(planData);
-      storageService.set('plans', plans);
+      await storageService.set('plans', plans);
 
       return planData;
     } catch (error) {
@@ -56,19 +61,19 @@ class PlanService {
     return true;
   }
 
-  delete(planId) {
-    const plans = this.getAll();
+  async delete(planId) {
+    const plans = await this.getAll();
     const filtered = plans.filter(p => p.id !== planId);
-    storageService.set('plans', filtered);
+    await storageService.set('plans', filtered);
     return true;
   }
 
-  assignToUser(userId, planId) {
-    return userService.update(userId, { activePlanId: planId });
+  async assignToUser(userId, planId) {
+    return await userService.update(userId, { activePlanId: planId });
   }
 
-  getTodayProgram(planId) {
-    const plan = this.getById(planId);
+  async getTodayProgram(planId) {
+    const plan = await this.getById(planId);
     if (!plan) return null;
 
     const today = new Date();

@@ -8,6 +8,46 @@
 
 ## Bugs Found During Initial Testing
 
+### Bug #7: Critical - 'plans.push is not a function' Error ✅ FIXED
+
+**Severity:** Critical (Plan Import Failure)
+**Status:** Fixed
+**Date Found:** 01 Kasım 2025
+**Date Fixed:** 01 Kasım 2025
+**Reported By:** User (Manual Testing)
+
+**Description:**
+When trying to import a plan JSON file, the import fails with:
+```
+TypeError: plans.push is not a function
+Plan import edilemedi: plans.push is not a function
+```
+
+**Root Cause:**
+planService methods (getAll, delete, assignToUser, getTodayProgram) were not async but called async storageService methods. This is the same pattern we saw with userService, examService, and progressService.
+
+**Files Affected:**
+- `src/renderer/services/planService.js` - All 5 methods
+
+**Fix Applied:**
+1. Made all planService methods async:
+   - `getAll()` → `async getAll()` with array validation
+   - `getById()` → `async getById()`
+   - `import()` → Already async, added await for getAll and set
+   - `delete()` → `async delete()`
+   - `assignToUser()` → `async assignToUser()`
+   - `getTodayProgram()` → `async getTodayProgram()`
+
+2. Added array validation to prevent push() errors
+3. PlanContext already properly handles async operations
+
+**Testing:**
+- [ ] Plan import should work now
+- [ ] Empty plans state handled correctly
+- [ ] Plan switching and deletion should work
+
+---
+
 ### Bug #5: Critical - 'allProgress.find is not a function' Error ✅ FIXED
 
 **Severity:** Critical (Study Log Page Crash)
