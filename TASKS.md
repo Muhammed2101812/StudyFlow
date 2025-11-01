@@ -1,19 +1,21 @@
 # 📋 StudyFlow - Development Tasks
 
-**Proje:** StudyFlow - Universal Study Planning & Tracking Application  
-**Versiyon:** 1.0.0 (MVP)  
-**Başlangıç Tarihi:** [TBD]  
+**Proje:** StudyFlow - Universal Study Planning & Tracking Application
+**Versiyon:** 1.0.0 (MVP)
+**Başlangıç Tarihi:** 01 Kasım 2025
+**Son Güncelleme:** 01 Kasım 2025
 **Tahmini Süre:** 76 saat / 6 hafta
+**Geçen Süre:** ~5 saat
 
 ---
 
 ## 📊 İlerleme Özeti
 
 - **Toplam Görev:** 150
-- **Tamamlanan:** 0
+- **Tamamlanan:** 75
 - **Devam Eden:** 0
-- **Bekleyen:** 150
-- **İlerleme:** ░░░░░░░░░░░░░░░░░░░░ 0%
+- **Bekleyen:** 75
+- **İlerleme:** ██████████░░░░░░░░░░ 50%
 
 ---
 
@@ -21,11 +23,11 @@
 
 | Sprint | Durum | Görev | Tamamlanan | İlerleme |
 |--------|-------|-------|------------|----------|
-| Sprint 1 | 🔴 Bekliyor | 25 | 0 | 0% |
-| Sprint 2 | 🔴 Bekliyor | 18 | 0 | 0% |
-| Sprint 3 | 🔴 Bekliyor | 16 | 0 | 0% |
-| Sprint 4 | 🔴 Bekliyor | 20 | 0 | 0% |
-| Sprint 5 | 🔴 Bekliyor | 22 | 0 | 0% |
+| Sprint 1 | 🟢 Tamamlandı | 25 | 25 | 100% |
+| Sprint 2 | 🟢 Tamamlandı | 18 | 18 | 100% |
+| Sprint 3 | 🟢 Tamamlandı | 16 | 16 | 100% |
+| Sprint 4 | 🟢 Tamamlandı | 20 | 20 | 100% |
+| Sprint 5 | 🟢 Tamamlandı | 22 | 22 | 100% |
 | Sprint 6 | 🔴 Bekliyor | 20 | 0 | 0% |
 | Sprint 7 | 🔴 Bekliyor | 15 | 0 | 0% |
 | Sprint 8 | 🔴 Bekliyor | 8 | 0 | 0% |
@@ -36,9 +38,22 @@
 
 # 🚀 SPRINT 1: Altyapı ve Temel Yapı
 
-**Hedef:** Proje iskeletinin oluşturulması ve temel routing  
-**Tahmini Süre:** 8 saat  
-**Durum:** 🔴 Bekliyor
+**Hedef:** Proje iskeletinin oluşturulması ve temel routing
+**Tahmini Süre:** 8 saat
+**Durum:** 🟢 Tamamlandı
+
+**Tamamlanan İşler:**
+- ✅ Electron + React + Vite + Tailwind CSS kurulumu
+- ✅ Tam klasör yapısı oluşturuldu
+- ✅ Common componentler (Button, Input, Card, Modal, LoadingSpinner)
+- ✅ Layout componentleri (Navbar, Sidebar, Layout)
+- ✅ Routing sistemi ve protected routes
+- ✅ UserContext ve PlanContext
+- ✅ Storage service ve user service
+- ✅ Development araçları (ESLint, Prettier)
+- ✅ Git repository ve ilk commit
+
+**Git Commit:** `d390ca8 - feat: Complete Sprint 1 - Infrastructure and basic structure`
 
 ## 1.1 Proje Kurulumu ve Başlangıç
 
@@ -268,9 +283,21 @@
 
 # 🧑 SPRINT 2: Kullanıcı Yönetimi
 
-**Hedef:** Multi-user sistem  
-**Tahmini Süre:** 6 saat  
-**Durum:** 🔴 Bekliyor
+**Hedef:** Multi-user sistem
+**Tahmini Süre:** 6 saat
+**Durum:** 🟢 Tamamlandı
+
+**Tamamlanan İşler:**
+- ✅ Toast notification sistemi (4 variant)
+- ✅ UserSelectPage tam fonksiyonel
+- ✅ Avatar sistemi (18 seçenek)
+- ✅ Settings sayfası - profil düzenleme
+- ✅ Kullanıcı silme (confirmation modal)
+- ✅ Logout/switch user fonksiyonları
+- ✅ Form validasyonları
+- ✅ Error handling
+
+**Git Commit:** `35fcae0 - feat: Complete Sprint 2 - User Management System`
 
 ## 2.1 User Service Implementation
 
@@ -436,9 +463,21 @@
 
 # 📚 SPRINT 3: Plan Yönetimi
 
-**Hedef:** Plan import ve yönetim sistemi  
-**Tahmini Süre:** 6 saat  
-**Durum:** 🔴 Bekliyor
+**Hedef:** Plan import ve yönetim sistemi
+**Tahmini Süre:** 6 saat
+**Durum:** 🟢 Tamamlandı
+
+**Tamamlanan İşler:**
+- ✅ PlanImport component (file picker dialog)
+- ✅ 3 örnek plan JSON (KPSS 2026, YKS 2025, LGS 2025)
+- ✅ Plan yönetimi Settings'e entegre
+- ✅ Plan listesi ve aktif plan gösterimi
+- ✅ Plan değiştirme ve silme
+- ✅ Electron IPC file operations
+- ✅ date-fns Turkish locale
+- ✅ Plan validasyonu
+
+**Git Commit:** `1d9621a - feat: Complete Sprint 3 - Plan Management System`
 
 ## 3.1 Plan Service Implementation
 
@@ -612,9 +651,21 @@
 
 # 🏠 SPRINT 4: Dashboard
 
-**Hedef:** Ana ekran ve bugünün programı  
-**Tahmini Süre:** 8 saat  
-**Durum:** 🔴 Bekliyor
+**Hedef:** Ana ekran ve bugünün programı
+**Tahmini Süre:** 8 saat
+**Durum:** 🟢 Tamamlandı
+
+**Tamamlanan İşler:**
+- ✅ TodayProgram widget (rest day detection)
+- ✅ WeeklySummary widget (progress tracking)
+- ✅ ExamCountdown widget (motivational messages)
+- ✅ QuickActions widget (4 action cards)
+- ✅ Responsive 2-column layout
+- ✅ Kişiselleştirilmiş karşılama
+- ✅ Subject color coding
+- ✅ Empty states
+
+**Git Commit:** `9bbd421 - feat: Complete Sprint 4 - Dashboard Implementation`
 
 ## 4.1 Dashboard Page Layout
 
@@ -790,9 +841,24 @@
 
 # 📝 SPRINT 5: Çalışma Takibi
 
-**Hedef:** Günlük çalışma kayıt sistemi  
-**Tahmini Süre:** 10 saat  
-**Durum:** 🔴 Bekliyor
+**Hedef:** Günlük çalışma kayıt sistemi
+**Tahmini Süre:** 10 saat
+**Durum:** 🟢 Tamamlandı
+
+**Tamamlanan İşler:**
+- ✅ ProgressService (CRUD, summary, streak calculation)
+- ✅ useProgress hook
+- ✅ Calendar component (interactive, progress indicators)
+- ✅ QuestionSetInput (multiple sets, net calculation)
+- ✅ StudyLogForm (topic, duration, question sets, notes)
+- ✅ StudyLogPage (calendar + form layout)
+- ✅ Study deletion (confirmation)
+- ✅ Real-time net calculation
+- ✅ Penalty toggle (yanlış siler)
+- ✅ Subject-specific statistics
+- ✅ Form validations
+
+**Git Commit:** `cd399d5 - feat: Complete Sprint 5 - Study Log System`
 
 ## 5.1 Progress Service Implementation
 
