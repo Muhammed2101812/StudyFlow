@@ -10,22 +10,22 @@ const examService = {
   /**
    * Get all exams for a user
    */
-  getAll(userId) {
+  async getAll(userId) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
-      return { success: true, data: exams };
+      const exams = await storageService.getUserData(userId, 'exams') || [];
+      return { success: true, data: Array.isArray(exams) ? exams : [] };
     } catch (error) {
       console.error('Error getting exams:', error);
-      return { success: false, error: 'Denemeler yüklenemedi' };
+      return { success: false, error: 'Denemeler yüklenemedi', data: [] };
     }
   },
 
   /**
    * Get exam by ID
    */
-  getById(userId, examId) {
+  async getById(userId, examId) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
+      const exams = await storageService.getUserData(userId, 'exams') || [];
       const exam = exams.find((e) => e.id === examId);
 
       if (!exam) {
@@ -42,9 +42,9 @@ const examService = {
   /**
    * Save a new exam
    */
-  save(userId, examData) {
+  async save(userId, examData) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
+      const exams = await storageService.getUserData(userId, 'exams') || [];
 
       const newExam = {
         id: uuidv4(),
@@ -53,7 +53,7 @@ const examService = {
       };
 
       exams.push(newExam);
-      storageService.set(`users.${userId}.exams`, exams);
+      await storageService.setUserData(userId, 'exams', exams);
 
       return { success: true, data: newExam };
     } catch (error) {
@@ -65,9 +65,9 @@ const examService = {
   /**
    * Update an existing exam
    */
-  update(userId, examId, updates) {
+  async update(userId, examId, updates) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
+      const exams = await storageService.getUserData(userId, 'exams') || [];
       const examIndex = exams.findIndex((e) => e.id === examId);
 
       if (examIndex === -1) {
@@ -80,7 +80,7 @@ const examService = {
         updatedAt: new Date().toISOString(),
       };
 
-      storageService.set(`users.${userId}.exams`, exams);
+      await storageService.setUserData(userId, 'exams', exams);
 
       return { success: true, data: exams[examIndex] };
     } catch (error) {
@@ -92,16 +92,16 @@ const examService = {
   /**
    * Delete an exam
    */
-  delete(userId, examId) {
+  async delete(userId, examId) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
+      const exams = await storageService.getUserData(userId, 'exams') || [];
       const filteredExams = exams.filter((e) => e.id !== examId);
 
       if (exams.length === filteredExams.length) {
         return { success: false, error: 'Deneme bulunamadı' };
       }
 
-      storageService.set(`users.${userId}.exams`, filteredExams);
+      await storageService.setUserData(userId, 'exams', filteredExams);
 
       return { success: true };
     } catch (error) {
@@ -168,9 +168,9 @@ const examService = {
   /**
    * Get subject-specific analysis
    */
-  getSubjectAnalysis(userId, subject) {
+  async getSubjectAnalysis(userId, subject) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
+      const exams = await storageService.getUserData(userId, 'exams') || [];
 
       if (!exams || exams.length === 0) {
         return {
@@ -232,9 +232,9 @@ const examService = {
   /**
    * Get trend data for charts
    */
-  getTrendData(userId) {
+  async getTrendData(userId) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
+      const exams = await storageService.getUserData(userId, 'exams') || [];
 
       if (!exams || exams.length === 0) {
         return { success: true, data: [] };
@@ -259,9 +259,9 @@ const examService = {
   /**
    * Get weak topics from all exams
    */
-  getWeakTopics(userId) {
+  async getWeakTopics(userId) {
     try {
-      const exams = storageService.get(`users.${userId}.exams`, []);
+      const exams = await storageService.getUserData(userId, 'exams') || [];
 
       if (!exams || exams.length === 0) {
         return { success: true, data: [] };

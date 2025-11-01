@@ -40,7 +40,7 @@ export function useExams() {
   };
 
   // Computed properties
-  const examsSorted = [...exams].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const examsSorted = Array.isArray(exams) ? [...exams].sort((a, b) => new Date(b.date) - new Date(a.date)) : [];
 
   const summary = examService.calculateSummary(exams);
 
