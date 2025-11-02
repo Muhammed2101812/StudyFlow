@@ -1,0 +1,15 @@
+This is a placeholder file. Please replace this with an actual 512x512 PNG icon for StudyFlow.
+
+For a proper icon, you should:
+1. Create or design a 512x512 PNG image
+2. Use an icon with the StudyFlow branding (book, study-related imagery)
+3. Convert to ICO format using tools like:
+   - https://convertio.co/png-ico/
+   - ImageMagick: convert icon.png -define icon:auto-resize=256,128,64,48,32,16 icon.ico
+   - Online converters
+
+Recommended icon design:
+- A book with a checkmark or progress indicator
+- Colors: Blue (#3B82F6) and white
+- Simple, recognizable design
+- Works well at small sizes (16x16, 32x32)

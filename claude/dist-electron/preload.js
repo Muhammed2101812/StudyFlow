@@ -1,17 +1,1 @@
-"use strict";
-const electron = require("electron");
-electron.contextBridge.exposeInMainWorld("electronAPI", {
-  readFile: (filePath) => electron.ipcRenderer.invoke("read-file", filePath),
-  writeFile: (filePath, content) => electron.ipcRenderer.invoke("write-file", filePath, content),
-  openFileDialog: () => electron.ipcRenderer.invoke("open-file-dialog"),
-  saveFileDialog: (defaultPath) => electron.ipcRenderer.invoke("save-file-dialog", defaultPath),
-  // Storage operations
-  store: {
-    get: (key) => electron.ipcRenderer.invoke("store-get", key),
-    set: (key, value) => electron.ipcRenderer.invoke("store-set", key, value),
-    delete: (key) => electron.ipcRenderer.invoke("store-delete", key),
-    has: (key) => electron.ipcRenderer.invoke("store-has", key),
-    clear: () => electron.ipcRenderer.invoke("store-clear"),
-    getAll: () => electron.ipcRenderer.invoke("store-get-all")
-  }
-});
+"use strict";const r=require("electron");r.contextBridge.exposeInMainWorld("electronAPI",{readFile:e=>r.ipcRenderer.invoke("read-file",e),writeFile:(e,i)=>r.ipcRenderer.invoke("write-file",e,i),openFileDialog:()=>r.ipcRenderer.invoke("open-file-dialog"),saveFileDialog:e=>r.ipcRenderer.invoke("save-file-dialog",e),store:{get:e=>r.ipcRenderer.invoke("store-get",e),set:(e,i)=>r.ipcRenderer.invoke("store-set",e,i),delete:e=>r.ipcRenderer.invoke("store-delete",e),has:e=>r.ipcRenderer.invoke("store-has",e),clear:()=>r.ipcRenderer.invoke("store-clear"),getAll:()=>r.ipcRenderer.invoke("store-get-all")}});
