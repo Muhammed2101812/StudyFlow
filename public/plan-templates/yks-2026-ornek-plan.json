@@ -1,0 +1,1632 @@
+{
+  "id": "yks-2026-sayisal",
+  "name": "YKS 2026 Sayısal Hazırlık Planı",
+  "description": "2026 YKS Sayısal için kapsamlı hazırlık programı. Temel seviyeden başlayarak ileri düzeye kadar tüm konuları kapsayan 40 haftalık çalışma planı.",
+  "examDate": "2026-06-13",
+  "subjects": [
+    "Matematik",
+    "Fizik",
+    "Kimya",
+    "Biyoloji",
+    "Türkçe",
+    "Tarih",
+    "Coğrafya"
+  ],
+  "stages": [
+    {
+      "name": "Aşama 1: Temel Atma (16 Hafta)",
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Sayılar - Doğal Sayılar ve Tam Sayılar",
+              "duration": 2,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Fiziksel Nicelikler ve Ölçme",
+              "duration": 1.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Kimyanın Temel Kanunları",
+              "duration": 1.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Rasyonel Sayılar",
+              "duration": 2,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Biyoloji",
+              "topic": "Canlıların Sınıflandırılması",
+              "duration": 2,
+              "targetQuestions": 35
+            }
+          ]
+        },
+        {
+          "weekNumber": 2,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Üslü Sayılar",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Vektörler",
+              "duration": 2,
+              "targetQuestions": 35
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Atom ve Periyodik Sistem",
+              "duration": 2,
+              "targetQuestions": 35
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Köklü Sayılar",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Anlam Bilgisi - Sözcükte Anlam",
+              "duration": 1.5,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 3,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Çarpanlara Ayırma",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Hareket - Konum, Hız, İvme",
+              "duration": 2,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Kimyasal Bağlar",
+              "duration": 2,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Oran-Orantı",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Biyoloji",
+              "topic": "Hücre Bölünmeleri - Mitoz",
+              "duration": 2,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 4,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Denklem Çözme - 1. Dereceden Denklemler",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Newton Kanunları",
+              "duration": 2.5,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Mol Kavramı ve Kimyasal Hesaplamalar",
+              "duration": 2.5,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Mutlak Değer",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Cümlede Anlam - Anlatım Bozuklukları",
+              "duration": 2,
+              "targetQuestions": 50
+            }
+          ]
+        },
+        {
+          "weekNumber": 5,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Eşitsizlikler",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Sürtünme Kuvveti",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Kimyasal Tepkimeler ve Denklemler",
+              "duration": 2,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Üslü ve Köklü Eşitlikler",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Biyoloji",
+              "topic": "Mayoz Bölünme ve Kalıtım",
+              "duration": 2.5,
+              "targetQuestions": 45
+            }
+          ]
+        },
+        {
+          "weekNumber": 6,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Kümeler - Küme İşlemleri",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "İş, Güç, Enerji",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Asitler, Bazlar ve Tuzlar",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Fonksiyonlar - Temel Kavramlar",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "İlk ve Orta Çağ Türk Tarihi",
+              "duration": 2,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 7,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Fonksiyonlarda İşlemler",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "İtme ve Momentum",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Karışımlar ve Ayırma Teknikleri",
+              "duration": 2,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Özel Tanımlı Fonksiyonlar",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Biyoloji",
+              "topic": "Protein Sentezi ve Genetik Şifre",
+              "duration": 2.5,
+              "targetQuestions": 50
+            }
+          ]
+        },
+        {
+          "weekNumber": 8,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Polinomlar - Temel İşlemler",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Tork ve Denge",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Türkçe",
+              "topic": "Paragraf - Ana Düşünce ve Yardımcı Düşünce",
+              "duration": 2,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Polinomlarda Bölme İşlemi",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Dünya'nın Şekli ve Hareketleri",
+              "duration": 2,
+              "targetQuestions": 45
+            }
+          ]
+        },
+        {
+          "weekNumber": 9,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "2. Dereceden Denklemler",
+              "duration": 3,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Basit Makineler",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Gazlar ve Gaz Kanunları",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Karekok Fonksiyonu",
+              "duration": 2,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Biyoloji",
+              "topic": "Canlılarda Enerji Dönüşümü - Solunum",
+              "duration": 2.5,
+              "targetQuestions": 55
+            }
+          ]
+        },
+        {
+          "weekNumber": 10,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Trigonometri - Açı Ölçüleri",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Elektrik ve Manyetizma - Elektrik Yükü",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Sıvıların Özellikleri",
+              "duration": 2,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Trigonometrik Fonksiyonlar",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Edebiyat - Edebi Akımlar ve Türler",
+              "duration": 2,
+              "targetQuestions": 50
+            }
+          ]
+        },
+        {
+          "weekNumber": 11,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Trigonometrik Denklemler",
+              "duration": 3,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Elektrik Akımı ve Direnç",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Biyoloji",
+              "topic": "Fotosentez",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Logaritma - Logaritma Kuralları",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Osmanlı Devleti Kuruluş Dönemi",
+              "duration": 2,
+              "targetQuestions": 50
+            }
+          ]
+        },
+        {
+          "weekNumber": 12,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Logaritma Denklemler ve Eşitsizlikler",
+              "duration": 3,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Elektrik Devreleri - Seri ve Paralel Bağlama",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Kimyasal Tepkimelerde Hız",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Diziler - Aritmetik Dizi",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Haritalar ve Konum Belirleme",
+              "duration": 2,
+              "targetQuestions": 50
+            }
+          ]
+        },
+        {
+          "weekNumber": 13,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Geometrik Dizi",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Manyetizma",
+              "duration": 2.5,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Biyoloji",
+              "topic": "Ekosistem Ekolojisi",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Limit - Limit Kavramı",
+              "duration": 3,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Yazım Kuralları ve Noktalama",
+              "duration": 2,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 14,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Limit Teoremi ve Belirsizlik Durumları",
+              "duration": 3,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Alternatif Akım",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Kimyasal Tepkimelerde Denge",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Süreklilik",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Osmanlı Yükselme Dönemi",
+              "duration": 2.5,
+              "targetQuestions": 55
+            }
+          ]
+        },
+        {
+          "weekNumber": 15,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Türev - Türev Alma Kuralları",
+              "duration": 3,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Dalgalar - Dalga Hareketi",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Biyoloji",
+              "topic": "İnsan Vücudunda Sistemler - Dolaşım",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Türev Uygulamaları",
+              "duration": 3,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "İklim ve Doğal Bölgeler",
+              "duration": 2.5,
+              "targetQuestions": 55
+            }
+          ]
+        },
+        {
+          "weekNumber": 16,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "İntegral - Belirsiz İntegral",
+              "duration": 3,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Ses Dalgaları",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Çözeltiler ve Çözünürlük",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Belirli İntegral",
+              "duration": 3,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Genel Tekrar ve Deneme Sınavı",
+              "duration": 2.5,
+              "targetQuestions": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aşama 2: Pekiştirme ve Hız Kazanma (12 Hafta)",
+      "weeks": [
+        {
+          "weekNumber": 17,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "İntegral Uygulamaları - Alan Hesaplama",
+              "duration": 3,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Optik - Işık ve Görme",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Biyoloji",
+              "topic": "Sindirim Sistemi",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Karmaşık Sayılar",
+              "duration": 3,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Osmanlı Duraklama ve Gerileme",
+              "duration": 2.5,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 18,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Olasılık - Permütasyon ve Kombinasyon",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Mercekler ve Aynalar",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Elektrokimya",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Olasılık Hesaplama",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Türkiye'nin Coğrafi Özellikleri",
+              "duration": 2.5,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 19,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Analitik Geometri - Doğru Denklemi",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Modern Fizik - Atom Modelleri",
+              "duration": 3,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Biyoloji",
+              "topic": "Solunum ve Boşaltım Sistemleri",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Çember Denklemi",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Paragraf Teknikleri ve Hız Çalışması",
+              "duration": 2.5,
+              "targetQuestions": 90
+            }
+          ]
+        },
+        {
+          "weekNumber": 20,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Konik Kesitler - Parabol",
+              "duration": 3,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Radyoaktivite",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Organik Kimya - Hidrokarbonlar",
+              "duration": 3,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Elips ve Hiperbol",
+              "duration": 3,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Osmanlı Yenileşme Hareketleri",
+              "duration": 2.5,
+              "targetQuestions": 65
+            }
+          ]
+        },
+        {
+          "weekNumber": 21,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Tüm Konular Karma Soru Çözümü - 1",
+              "duration": 3.5,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Tüm Konular Karma Soru Çözümü - 1",
+              "duration": 3,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Fonksiyonel Gruplar",
+              "duration": 3,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Sinir Sistemi ve Hormonlar",
+              "duration": 3,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Tüm Konular Karma Soru Çözümü",
+              "duration": 3,
+              "targetQuestions": 100
+            }
+          ]
+        },
+        {
+          "weekNumber": 22,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Zor Matematik Soruları Çözümü",
+              "duration": 4,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Zor Fizik Soruları Çözümü",
+              "duration": 3.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Zor Kimya Soruları Çözümü",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Zor Biyoloji Soruları Çözümü",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Türkiye'nin Beşeri ve Ekonomik Coğrafyası",
+              "duration": 3,
+              "targetQuestions": 70
+            }
+          ]
+        },
+        {
+          "weekNumber": 23,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 1",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 1",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 1",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 1",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 1",
+              "duration": 2.5,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 24,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Zayıf Konular Tekrarı - Türev ve İntegral",
+              "duration": 4,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Zayıf Konular Tekrarı - Elektrik ve Manyetizma",
+              "duration": 3.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Zayıf Konular Tekrarı - Kimyasal Denge",
+              "duration": 3,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Zayıf Konular Tekrarı - Genetik",
+              "duration": 3,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Türkiye Cumhuriyeti Tarihi - Kuruluş",
+              "duration": 3,
+              "targetQuestions": 75
+            }
+          ]
+        },
+        {
+          "weekNumber": 25,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 2",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 2",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 2",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 2",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 2",
+              "duration": 2.5,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 26,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Hız Çalışması - Zaman Yönetimi",
+              "duration": 3.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Hız Çalışması - Zaman Yönetimi",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Hız Çalışması - Zaman Yönetimi",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Hız Çalışması - Zaman Yönetimi",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Tüm Konular Genel Tekrar",
+              "duration": 3,
+              "targetQuestions": 90
+            }
+          ]
+        },
+        {
+          "weekNumber": 27,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 3",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 3",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 3",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 3",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Çözümü ve Analizi - 3",
+              "duration": 2.5,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 28,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Tüm Konular Karma - Hızlı Soru Çözme",
+              "duration": 4,
+              "targetQuestions": 130
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Tüm Konular Karma - Hızlı Soru Çözme",
+              "duration": 3.5,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Tüm Konular Karma - Hızlı Soru Çözme",
+              "duration": 3,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Tüm Konular Karma - Hızlı Soru Çözme",
+              "duration": 3,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Atatürk İlkeleri ve İnkılap Tarihi",
+              "duration": 3,
+              "targetQuestions": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aşama 3: Final Sprint - Son 12 Hafta",
+      "weeks": [
+        {
+          "weekNumber": 29,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1 + Analiz",
+              "duration": 3,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 30,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Yanlış Sorular ve Zayıf Konular Tekrarı",
+              "duration": 4,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Yanlış Sorular ve Zayıf Konular Tekrarı",
+              "duration": 3.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Yanlış Sorular ve Zayıf Konular Tekrarı",
+              "duration": 3,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Yanlış Sorular ve Zayıf Konular Tekrarı",
+              "duration": 3,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Türkiye ve Dünya - Son Tekrar",
+              "duration": 3,
+              "targetQuestions": 90
+            }
+          ]
+        },
+        {
+          "weekNumber": 31,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2 + Analiz",
+              "duration": 3,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 32,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Son Dönem Kritik Konular - Limit, Türev, İntegral",
+              "duration": 4.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Son Dönem Kritik Konular - Elektrik, Optik",
+              "duration": 3.5,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Son Dönem Kritik Konular - Denge, Organik",
+              "duration": 3.5,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Son Dönem Kritik Konular - Genetik, Sistemler",
+              "duration": 3.5,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Son Tekrar - Tüm Dönemler",
+              "duration": 3,
+              "targetQuestions": 90
+            }
+          ]
+        },
+        {
+          "weekNumber": 33,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3 + Analiz",
+              "duration": 3,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 34,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Maksimum Hız - 150 Soru 3 Saatte",
+              "duration": 3,
+              "targetQuestions": 150
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Maksimum Hız - 120 Soru 2.5 Saatte",
+              "duration": 2.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Maksimum Hız - 120 Soru 2.5 Saatte",
+              "duration": 2.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Maksimum Hız - 120 Soru 2.5 Saatte",
+              "duration": 2.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Final Tekrar - Tüm Konular",
+              "duration": 3,
+              "targetQuestions": 100
+            }
+          ]
+        },
+        {
+          "weekNumber": 35,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 4",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 4",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 4",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Maratonu - Sınav 4",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 4 + Analiz",
+              "duration": 3,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 36,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Stratejik Soru Seçimi ve Doğru Yönetimi",
+              "duration": 4,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Stratejik Soru Seçimi ve Doğru Yönetimi",
+              "duration": 3.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Stratejik Soru Seçimi ve Doğru Yönetimi",
+              "duration": 3,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Stratejik Soru Seçimi ve Doğru Yönetimi",
+              "duration": 3,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Final Tekrar - Kritik Dönemler",
+              "duration": 3,
+              "targetQuestions": 100
+            }
+          ]
+        },
+        {
+          "weekNumber": 37,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5 (Son Büyük Deneme)",
+              "duration": 4,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5",
+              "duration": 3,
+              "targetQuestions": 14
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5",
+              "duration": 3,
+              "targetQuestions": 13
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5 + Detaylı Analiz",
+              "duration": 3.5,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 38,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Son Hafta - Formül ve Kural Tekrarı",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Son Hafta - Formül ve Kural Tekrarı",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Son Hafta - Formül ve Kural Tekrarı",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Son Hafta - Şema ve Kavram Haritaları",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Son Hafta - Hızlı Okuma ve Zaman Yönetimi",
+              "duration": 2,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 39,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Hafif Tempolu Soru Çözümü - Pekiştirme",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Hafif Tempolu Soru Çözümü - Pekiştirme",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Hafif Tempolu Soru Çözümü - Pekiştirme",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Hafif Tempolu Soru Çözümü - Pekiştirme",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Son Gözden Geçirme",
+              "duration": 2,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 40,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Moral Motivasyon - Kolay Sorularla Özgüven",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Özet Tekrar - Formül Listesi Gözden Geçirme",
+              "duration": 1.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Özet Tekrar - Formül Listesi Gözden Geçirme",
+              "duration": 1.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Cuma",
+              "subject": "Tüm Dersler",
+              "topic": "Hafif Tempo - Özgüven Pekiştirme ve Dinlenme",
+              "duration": 2,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Motivasyon",
+              "topic": "Tam Dinlenme - Sınav Stratejisi Gözden Geçirme",
+              "duration": 1,
+              "targetQuestions": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

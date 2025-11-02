@@ -1,0 +1,56 @@
+{
+  "id": "yks-2025",
+  "name": "YKS 2025 Hazırlık Planı (TYT)",
+  "examDate": "2025-06-14",
+  "subjects": ["Türkçe", "Matematik", "Tarih", "Coğrafya", "Fizik", "Kimya", "Biyoloji"],
+  "totalWeeks": 30,
+  "stages": [
+    {
+      "name": "Konu Anlatımı",
+      "startWeek": 1,
+      "endWeek": 15,
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Temel Kavramlar",
+              "duration": 3,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Fizik",
+              "topic": "Hareket",
+              "duration": 2.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Kimya",
+              "topic": "Atom ve Periyodik Sistem",
+              "duration": 2.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Cuma",
+              "subject": "Biyoloji",
+              "topic": "Hücre",
+              "duration": 2,
+              "targetQuestions": 25
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Türkçe",
+              "topic": "Sözcük - Cümle Bilgisi",
+              "duration": 3,
+              "targetQuestions": 40
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

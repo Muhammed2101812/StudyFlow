@@ -1,0 +1,56 @@
+{
+  "id": "lgs-2025",
+  "name": "LGS 2025 Hazırlık Planı",
+  "examDate": "2025-06-01",
+  "subjects": ["Türkçe", "Matematik", "Fen Bilimleri", "İnkılap Tarihi", "Din Kültürü", "İngilizce"],
+  "totalWeeks": 24,
+  "stages": [
+    {
+      "name": "Konu Anlatımı",
+      "startWeek": 1,
+      "endWeek": 12,
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Sayılar ve İşlemler",
+              "duration": 2.5,
+              "targetQuestions": 35
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Sözcük Bilgisi",
+              "duration": 2,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Fen Bilimleri",
+              "topic": "Madde ve Doğası",
+              "duration": 2,
+              "targetQuestions": 25
+            },
+            {
+              "day": "Cuma",
+              "subject": "İngilizce",
+              "topic": "Temel Kelimeler ve Gramer",
+              "duration": 1.5,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "İnkılap Tarihi",
+              "topic": "Osmanlı'nın Son Dönemi",
+              "duration": 2,
+              "targetQuestions": 15
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

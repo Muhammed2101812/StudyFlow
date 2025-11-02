@@ -1,0 +1,143 @@
+{
+  "id": "kpss-2026",
+  "name": "KPSS 2026 Hazırlık Planı",
+  "examDate": "2026-07-12",
+  "subjects": ["Türkçe", "Matematik", "Tarih", "Coğrafya", "Vatandaşlık", "Güncel"],
+  "totalWeeks": 48,
+  "stages": [
+    {
+      "name": "Konu Anlatımı - 1. Dönem",
+      "startWeek": 1,
+      "endWeek": 12,
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Cümle Bilgisi - Temel Kavramlar",
+              "duration": 3,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Temel Kavramlar ve İşlemler",
+              "duration": 3,
+              "targetQuestions": 35
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "İlk Çağ Medeniyetleri",
+              "duration": 2.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Cuma",
+              "subject": "Coğrafya",
+              "topic": "Dünya'nın Şekli ve Hareketleri",
+              "duration": 2.5,
+              "targetQuestions": 25
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Vatandaşlık",
+              "topic": "İnsan Hakları ve Özgürlükler",
+              "duration": 2,
+              "targetQuestions": 20
+            }
+          ]
+        },
+        {
+          "weekNumber": 2,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Fiil Çatıları",
+              "duration": 3,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Kümeler",
+              "duration": 3,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "İlk Türk Devletleri",
+              "duration": 2.5,
+              "targetQuestions": 35
+            },
+            {
+              "day": "Cuma",
+              "subject": "Coğrafya",
+              "topic": "Harita Bilgisi",
+              "duration": 2.5,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Güncel Olaylar - Haftalık Değerlendirme",
+              "duration": 2,
+              "targetQuestions": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Soru Çözümü - 1. Dönem",
+      "startWeek": 13,
+      "endWeek": 24,
+      "weeks": [
+        {
+          "weekNumber": 13,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Cümle Bilgisi - Soru Çözümü",
+              "duration": 3,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Temel İşlemler - Soru Çözümü",
+              "duration": 3,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "İlk Çağlar - Soru Çözümü",
+              "duration": 2.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cuma",
+              "subject": "Coğrafya",
+              "topic": "Genel Coğrafya - Soru Çözümü",
+              "duration": 2.5,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Karma",
+              "topic": "Tüm Dersler Karma Soru",
+              "duration": 3,
+              "targetQuestions": 80
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "appId": "com.studyflow.app",
+  "productName": "StudyFlow",
+  "directories": {
+    "output": "release",
+    "buildResources": "public"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "StudyFlow"
+  },
+  "mac": {
+    "target": ["dmg"],
+    "category": "public.app-category.education"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "category": "Education"
+  }
+}

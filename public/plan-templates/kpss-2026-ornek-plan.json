@@ -1,0 +1,1311 @@
+{
+  "id": "kpss-2026-ortaogretim",
+  "name": "KPSS 2026 Ortaöğretim Hazırlık Planı",
+  "description": "2026 KPSS Ortaöğretim sınavı için kapsamlı hazırlık programı. Genel Yetenek, Genel Kültür ve Eğitim Bilimleri alanlarını kapsayan 32 haftalık çalışma planı.",
+  "examDate": "2026-07-12",
+  "subjects": [
+    "Türkçe",
+    "Matematik",
+    "Tarih",
+    "Coğrafya",
+    "Vatandaşlık",
+    "Güncel"
+  ],
+  "stages": [
+    {
+      "name": "Aşama 1: Temel Oluşturma (12 Hafta)",
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Sözcükte Anlam - Gerçek ve Mecaz Anlam",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Temel Kavramlar - Sayı Kümeleri",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "İlk Türk Devletleri",
+              "duration": 1.5,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Sözcükte Anlam - Eş Anlamlılık, Zıt Anlamlılık",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Dünya'nın Şekli ve Özellikleri",
+              "duration": 1.5,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 2,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Dört İşlem ve İşlem Önceliği",
+              "duration": 2,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Cümle Bilgisi - Cümle Türleri",
+              "duration": 2,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "Türk-İslam Devletleri",
+              "duration": 1.5,
+              "targetQuestions": 45
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Bölme ve Bölünebilme Kuralları",
+              "duration": 2,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Haritalar ve Yön Bulma",
+              "duration": 1.5,
+              "targetQuestions": 45
+            }
+          ]
+        },
+        {
+          "weekNumber": 3,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Fiillerde Zaman - Şimdiki, Geçmiş, Gelecek",
+              "duration": 2,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "EBOB - EKOK",
+              "duration": 2.5,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Vatandaşlık",
+              "topic": "Türkiye Cumhuriyeti Anayasası - Temel İlkeler",
+              "duration": 1.5,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Fiil Kipleri - Haber Kipleri",
+              "duration": 2,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Osmanlı Devleti Kuruluş Dönemi",
+              "duration": 2,
+              "targetQuestions": 50
+            }
+          ]
+        },
+        {
+          "weekNumber": 4,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Basit Kesirler",
+              "duration": 2,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Fiil Kipleri - Dilek Kipleri",
+              "duration": 2,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "İklim Tipleri ve Özellikleri",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Ondalık Kesirler",
+              "duration": 2,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Türkiye'nin Güncel Ekonomik Verileri",
+              "duration": 1.5,
+              "targetQuestions": 40
+            }
+          ]
+        },
+        {
+          "weekNumber": 5,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "İsim Tamlamaları",
+              "duration": 2,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Oran-Orantı",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "Osmanlı Yükselme Dönemi",
+              "duration": 2,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Sıfat Tamlamaları",
+              "duration": 2,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Türkiye'nin Coğrafi Özellikleri",
+              "duration": 2,
+              "targetQuestions": 55
+            }
+          ]
+        },
+        {
+          "weekNumber": 6,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Yüzdeler",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Paragraf - Ana Düşünce Bulma",
+              "duration": 2,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Vatandaşlık",
+              "topic": "Temel Hak ve Özgürlükler",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Kâr-Zarar Problemleri",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Osmanlı Duraklama Dönemi",
+              "duration": 2,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 7,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Paragraf - Düşünceyi Geliştirme Yolları",
+              "duration": 2.5,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Faiz Problemleri",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Türkiye'nin Bölgeleri",
+              "duration": 2,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Cümle Tahlili",
+              "duration": 2.5,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Türkiye'nin Uluslararası İlişkileri",
+              "duration": 1.5,
+              "targetQuestions": 45
+            }
+          ]
+        },
+        {
+          "weekNumber": 8,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Kümeler - Küme İşlemleri",
+              "duration": 2.5,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Yazım Kuralları - Büyük Harf Kullanımı",
+              "duration": 2,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "Osmanlı Gerileme ve Yenileşme Hareketleri",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Mantık - Önerme Çeşitleri",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Türkiye'nin Nüfus Özellikleri",
+              "duration": 2,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 9,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Noktalama İşaretleri",
+              "duration": 2,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Mantık - Çıkarım ve Akıl Yürütme",
+              "duration": 2.5,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Vatandaşlık",
+              "topic": "Kuvvetler Ayrılığı - Yasama, Yürütme, Yargı",
+              "duration": 2,
+              "targetQuestions": 55
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Anlatım Bozuklukları",
+              "duration": 2.5,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Balkan Savaşları ve I. Dünya Savaşı",
+              "duration": 2.5,
+              "targetQuestions": 70
+            }
+          ]
+        },
+        {
+          "weekNumber": 10,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Problemler - Yaş Problemleri",
+              "duration": 2.5,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Cümle Çeşitleri - Yüklemine Göre",
+              "duration": 2,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Türkiye'nin Ekonomik Özellikleri",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Problemler - Hız, Mesafe, Zaman",
+              "duration": 2.5,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Çevre ve İklim Değişikliği Güncel Konuları",
+              "duration": 1.5,
+              "targetQuestions": 50
+            }
+          ]
+        },
+        {
+          "weekNumber": 11,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Cümle Çeşitleri - Anlamına Göre",
+              "duration": 2.5,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Problemler - İşçi ve Havuz Problemleri",
+              "duration": 2.5,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "Milli Mücadele ve Kurtuluş Savaşı",
+              "duration": 2.5,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Paragraf Tamamlama ve Sıralama",
+              "duration": 2.5,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Dünya'nın Genel Coğrafi Özellikleri",
+              "duration": 2,
+              "targetQuestions": 70
+            }
+          ]
+        },
+        {
+          "weekNumber": 12,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Geometri - Açılar ve Doğrular",
+              "duration": 2.5,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Atasözleri ve Deyimler",
+              "duration": 2,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Vatandaşlık",
+              "topic": "İnsan Hakları ve Evrensel Değerler",
+              "duration": 2,
+              "targetQuestions": 60
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Geometri - Üçgenler",
+              "duration": 2.5,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Türkiye Cumhuriyeti'nin İlk Yılları ve İnkılaplar",
+              "duration": 2.5,
+              "targetQuestions": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aşama 2: Derinleştirme ve Pekiştirme (12 Hafta)",
+      "weeks": [
+        {
+          "weekNumber": 13,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Tüm Konular Karma Soru Çözümü - 1",
+              "duration": 3,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Geometri - Dörtgenler",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Dünya'nın Ekonomik ve Siyasi Coğrafyası",
+              "duration": 2.5,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Geometri - Çember ve Daire",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Türkiye'nin Güncel Sosyal Politikaları",
+              "duration": 2,
+              "targetQuestions": 55
+            }
+          ]
+        },
+        {
+          "weekNumber": 14,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Tüm Konular Karma Soru Çözümü - 1",
+              "duration": 3,
+              "targetQuestions": 95
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Anlam Bilgisi - Söz Sanatları",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "Atatürk İlkeleri ve İnkılap Tarihi",
+              "duration": 2.5,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Edebiyat - Edebi Türler",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Türkiye ve Çevre Ülkeler İlişkileri",
+              "duration": 2.5,
+              "targetQuestions": 75
+            }
+          ]
+        },
+        {
+          "weekNumber": 15,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Data Yorumlama - Grafik ve Tablo",
+              "duration": 3,
+              "targetQuestions": 95
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Tüm Konular Karma Soru Çözümü - 2",
+              "duration": 3,
+              "targetQuestions": 95
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Vatandaşlık",
+              "topic": "Türk Demokrasi Tarihi",
+              "duration": 2.5,
+              "targetQuestions": 65
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Olasılık ve Permütasyon",
+              "duration": 3,
+              "targetQuestions": 95
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "II. Dünya Savaşı Sonrası Türkiye",
+              "duration": 2.5,
+              "targetQuestions": 85
+            }
+          ]
+        },
+        {
+          "weekNumber": 16,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Analizi ve Zayıf Konular - 1",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Tüm Konular Karma Soru Çözümü - 2",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Tüm Konular Karma Soru Çözümü",
+              "duration": 2.5,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Sayısal Yetenek Testleri",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Son Dönem Ulusal ve Uluslararası Olaylar",
+              "duration": 2,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 17,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Hız Çalışması - 100 Soru 60 Dakikada",
+              "duration": 2.5,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Hız Çalışması - 100 Soru 60 Dakikada",
+              "duration": 2.5,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "Tüm Konular Karma Soru Çözümü",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Zor Sorular Çözümü ve Teknikleri",
+              "duration": 3,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Zor Sorular Çözümü ve Teknikleri",
+              "duration": 2.5,
+              "targetQuestions": 70
+            }
+          ]
+        },
+        {
+          "weekNumber": 18,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Zor Sorular Çözümü ve Teknikleri",
+              "duration": 3,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Analizi ve Zayıf Konular - 2",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Vatandaşlık",
+              "topic": "Tüm Konular Karma Soru Çözümü",
+              "duration": 2.5,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Analizi ve Zayıf Konular - 2",
+              "duration": 3,
+              "targetQuestions": 105
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Zor Sorular ve Tuzaklar",
+              "duration": 2.5,
+              "targetQuestions": 75
+            }
+          ]
+        },
+        {
+          "weekNumber": 19,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Tüm Konular Genel Tekrar - 1",
+              "duration": 3,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Tüm Konular Genel Tekrar - 1",
+              "duration": 3,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Kritik Konular Son Tekrar",
+              "duration": 2.5,
+              "targetQuestions": 85
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Paragraf ve Anlam Bilgisi Yoğunlaştırma",
+              "duration": 3,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Son 6 Ay Güncel Olaylar Özeti",
+              "duration": 2,
+              "targetQuestions": 65
+            }
+          ]
+        },
+        {
+          "weekNumber": 20,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Tüm Konular Genel Tekrar - 2",
+              "duration": 3,
+              "targetQuestions": 115
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tarih",
+              "topic": "Kritik Konular Son Tekrar",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cuma",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Coğrafya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1",
+              "duration": 2.5,
+              "targetQuestions": 20
+            }
+          ]
+        },
+        {
+          "weekNumber": 21,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Sınav 1 Yanlış Soruları Analizi",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Sınav 1 Yanlış Soruları Analizi",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Vatandaşlık",
+              "topic": "Kritik Konular Son Tekrar",
+              "duration": 2.5,
+              "targetQuestions": 75
+            },
+            {
+              "day": "Cuma",
+              "subject": "Tüm Dersler",
+              "topic": "Karma Deneme Çözümü",
+              "duration": 3,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Deneme Sınavı Maratonu - Sınav 1 Analizi",
+              "duration": 2.5,
+              "targetQuestions": 20
+            }
+          ]
+        },
+        {
+          "weekNumber": 22,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 2.5,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cuma",
+              "subject": "Tarih",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 2.5,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Vatandaşlık",
+              "topic": "Deneme Sınavı Maratonu - Sınav 2",
+              "duration": 2,
+              "targetQuestions": 15
+            }
+          ]
+        },
+        {
+          "weekNumber": 23,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Sınav 2 Detaylı Analiz ve Pekiştirme",
+              "duration": 3.5,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Sınav 2 Detaylı Analiz ve Pekiştirme",
+              "duration": 3.5,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tüm Dersler",
+              "topic": "Zayıf Konular Yoğunlaştırma",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Maksimum Hız Çalışması - 120 Soru 60 Dakika",
+              "duration": 2.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Matematik",
+              "topic": "Maksimum Hız Çalışması - 120 Soru 60 Dakika",
+              "duration": 2.5,
+              "targetQuestions": 120
+            }
+          ]
+        },
+        {
+          "weekNumber": 24,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 2.5,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cuma",
+              "subject": "Tarih",
+              "topic": "Deneme Sınavı Maratonu - Sınav 3",
+              "duration": 2.5,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tüm Dersler",
+              "topic": "Sınav 3 Genel Değerlendirme ve Strateji",
+              "duration": 3,
+              "targetQuestions": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aşama 3: Final Sprint (8 Hafta)",
+      "weeks": [
+        {
+          "weekNumber": 25,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Son Dönem Yoğun Tekrar - Anlam Bilgisi",
+              "duration": 3.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Son Dönem Yoğun Tekrar - Problemler",
+              "duration": 3.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Tüm Konular Express Tekrar",
+              "duration": 3,
+              "targetQuestions": 95
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Son Dönem Yoğun Tekrar - Paragraf",
+              "duration": 3.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tarih",
+              "topic": "Tüm Konular Express Tekrar",
+              "duration": 3,
+              "targetQuestions": 95
+            }
+          ]
+        },
+        {
+          "weekNumber": 26,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Matematik",
+              "topic": "Son Dönem Yoğun Tekrar - Geometri",
+              "duration": 3.5,
+              "targetQuestions": 125
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 4",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 4",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Cuma",
+              "subject": "Vatandaşlık",
+              "topic": "Tüm Konular Express Tekrar",
+              "duration": 2.5,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Güncel",
+              "topic": "Son 3 Ay Güncel Olaylar Yoğunlaştırma",
+              "duration": 2.5,
+              "targetQuestions": 70
+            }
+          ]
+        },
+        {
+          "weekNumber": 27,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Sınav 4 Analizi ve Son Eksiklikler",
+              "duration": 3.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Sınav 4 Analizi ve Son Eksiklikler",
+              "duration": 3.5,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tüm Dersler",
+              "topic": "Karma Deneme - Hız ve Doğruluk Dengesi",
+              "duration": 3,
+              "targetQuestions": 130
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Kritik Stratejiler - Soru Seçimi",
+              "duration": 3,
+              "targetQuestions": 100
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Matematik",
+              "topic": "Kritik Stratejiler - Zaman Yönetimi",
+              "duration": 3,
+              "targetQuestions": 100
+            }
+          ]
+        },
+        {
+          "weekNumber": 28,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5",
+              "duration": 2.5,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cuma",
+              "subject": "Tarih",
+              "topic": "Deneme Sınavı Maratonu - Sınav 5",
+              "duration": 2.5,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tüm Dersler",
+              "topic": "Sınav 5 Genel Değerlendirme",
+              "duration": 3,
+              "targetQuestions": 115
+            }
+          ]
+        },
+        {
+          "weekNumber": 29,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Formül ve Kural Listesi Gözden Geçirme",
+              "duration": 3,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Formül ve Kural Listesi Gözden Geçirme",
+              "duration": 3,
+              "targetQuestions": 110
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Coğrafya",
+              "topic": "Özet Bilgiler Son Bakış",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cuma",
+              "subject": "Tarih",
+              "topic": "Özet Bilgiler Son Bakış",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Vatandaşlık",
+              "topic": "Son Gözden Geçirme",
+              "duration": 2,
+              "targetQuestions": 75
+            }
+          ]
+        },
+        {
+          "weekNumber": 30,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Deneme Sınavı Maratonu - Final Sınavı",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Deneme Sınavı Maratonu - Final Sınavı",
+              "duration": 3,
+              "targetQuestions": 30
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tüm Dersler",
+              "topic": "Final Sınavı Detaylı Analiz",
+              "duration": 3,
+              "targetQuestions": 120
+            },
+            {
+              "day": "Cuma",
+              "subject": "Türkçe",
+              "topic": "Hafif Tempo - Özgüven Pekiştirme",
+              "duration": 2.5,
+              "targetQuestions": 80
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Matematik",
+              "topic": "Hafif Tempo - Özgüven Pekiştirme",
+              "duration": 2.5,
+              "targetQuestions": 80
+            }
+          ]
+        },
+        {
+          "weekNumber": 31,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Türkçe",
+              "topic": "Son Hafta - Kolay Sorularla Moral",
+              "duration": 2,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Matematik",
+              "topic": "Son Hafta - Kolay Sorularla Moral",
+              "duration": 2,
+              "targetQuestions": 70
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Tüm Dersler",
+              "topic": "Özet Tekrar - Hafif Tempo",
+              "duration": 2.5,
+              "targetQuestions": 90
+            },
+            {
+              "day": "Cuma",
+              "subject": "Güncel",
+              "topic": "Son Dakika Güncel Konular",
+              "duration": 1.5,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Tüm Dersler",
+              "topic": "Hafif Çalışma - Özet Notlar",
+              "duration": 2,
+              "targetQuestions": 60
+            }
+          ]
+        },
+        {
+          "weekNumber": 32,
+          "days": [
+            {
+              "day": "Salı",
+              "subject": "Tüm Dersler",
+              "topic": "Formüller ve Kurallar Son Bakış",
+              "duration": 2,
+              "targetQuestions": 50
+            },
+            {
+              "day": "Çarşamba",
+              "subject": "Türkçe",
+              "topic": "Özgüven Artırıcı Kolay Sorular",
+              "duration": 1.5,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Perşembe",
+              "subject": "Matematik",
+              "topic": "Özgüven Artırıcı Kolay Sorular",
+              "duration": 1.5,
+              "targetQuestions": 40
+            },
+            {
+              "day": "Cuma",
+              "subject": "Tüm Dersler",
+              "topic": "Sınav Stratejisi Gözden Geçirme ve Dinlenme",
+              "duration": 1,
+              "targetQuestions": 20
+            },
+            {
+              "day": "Cumartesi",
+              "subject": "Dinlenme",
+              "topic": "Tam Dinlenme - Zihinsel Hazırlık",
+              "duration": 0.5,
+              "targetQuestions": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
