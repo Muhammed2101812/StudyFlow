@@ -17,9 +17,11 @@ export const PlanProvider = ({ children }) => {
   }, [currentUser]);
 
   const loadPlans = async () => {
+    if (!currentUser) return;
+
     setLoading(true);
     try {
-      const allPlans = await planService.getAll();
+      const allPlans = await planService.getAll(currentUser.id);
       setPlans(allPlans);
 
       // Load user's active plan
@@ -35,9 +37,13 @@ export const PlanProvider = ({ children }) => {
   };
 
   const importPlan = async (filePath) => {
+    if (!currentUser) {
+      return { success: false, error: 'Kullanıcı bulunamadı' };
+    }
+
     try {
-      const plan = await planService.import(filePath);
-      setPlans([...plans, plan]);
+      const plan = await planService.import(currentUser.id, filePath);
+      await loadPlans(); // Reload plans to get updated list
       return { success: true, data: plan };
     } catch (error) {
       return { success: false, error: error.message };
@@ -62,8 +68,12 @@ export const PlanProvider = ({ children }) => {
   };
 
   const deletePlan = async (planId) => {
+    if (!currentUser) {
+      return { success: false, error: 'Kullanıcı bulunamadı' };
+    }
+
     try {
-      await planService.delete(planId);
+      await planService.delete(currentUser.id, planId);
       setPlans(plans.filter(p => p.id !== planId));
       if (currentPlan?.id === planId) {
         setCurrentPlan(null);

@@ -30,8 +30,13 @@ export const ToastProvider = ({ children }) => {
     info: (message, duration) => addToast(message, 'info', duration),
   };
 
+  // Also provide as showToast for backward compatibility
+  const showToast = (message, type = 'info', duration = 3000) => {
+    addToast(message, type, duration);
+  };
+
   return (
-    <ToastContext.Provider value={{ toast, removeToast }}>
+    <ToastContext.Provider value={{ toast, showToast, removeToast }}>
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast} />
     </ToastContext.Provider>

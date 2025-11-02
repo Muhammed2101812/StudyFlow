@@ -11,9 +11,13 @@ class ExportService {
   async exportAllData(userId) {
     try {
       const user = await userService.getById(userId);
-      const progress = progressService.getAll(userId);
-      const exams = examService.getAll(userId);
+      const progress = await progressService.getAll(userId);
+      const exams = await examService.getAll(userId);
       const settings = await storageService.getUserData(userId, 'settings');
+
+      // Ensure progress and exams are arrays
+      const progressArray = Array.isArray(progress) ? progress : [];
+      const examsArray = Array.isArray(exams) ? exams : [];
 
       const exportData = {
         exportDate: new Date().toISOString(),
@@ -24,13 +28,13 @@ class ExportService {
           avatar: user.avatar,
           createdAt: user.createdAt,
         },
-        progress,
-        exams,
+        progress: progressArray,
+        exams: examsArray,
         settings,
         statistics: {
-          totalStudyDays: progress.length,
-          totalExams: exams.length,
-          totalHours: progress.reduce((sum, p) => sum + (p.duration || 0), 0),
+          totalStudyDays: progressArray.length,
+          totalExams: examsArray.length,
+          totalHours: progressArray.reduce((sum, p) => sum + (p.duration || 0), 0),
         },
       };
 
@@ -53,7 +57,7 @@ class ExportService {
   async exportProgress(userId) {
     try {
       const user = await userService.getById(userId);
-      const progress = progressService.getAll(userId);
+      const progress = await progressService.getAll(userId);
 
       const exportData = {
         exportDate: new Date().toISOString(),
@@ -84,7 +88,7 @@ class ExportService {
   async exportExams(userId) {
     try {
       const user = await userService.getById(userId);
-      const exams = examService.getAll(userId);
+      const exams = await examService.getAll(userId);
 
       const exportData = {
         exportDate: new Date().toISOString(),

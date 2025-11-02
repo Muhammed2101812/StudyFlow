@@ -2,8 +2,12 @@ import storageService from './storageService';
 import userService from './userService';
 
 class PlanService {
-  async getAll() {
-    const plans = await storageService.get('plans');
+  async getAll(userId) {
+    if (!userId) {
+      console.error('PlanService.getAll: userId is required');
+      return [];
+    }
+    const plans = await storageService.getUserData(userId, 'plans');
     // Ensure we always return an array
     if (!plans || !Array.isArray(plans)) {
       return [];
@@ -11,13 +15,17 @@ class PlanService {
     return plans;
   }
 
-  async getById(planId) {
-    const plans = await this.getAll();
+  async getById(userId, planId) {
+    const plans = await this.getAll(userId);
     return plans.find(p => p.id === planId) || null;
   }
 
-  async import(filePath) {
+  async import(userId, filePath) {
     try {
+      if (!userId) {
+        throw new Error('Kullanıcı ID gerekli');
+      }
+
       // Read file using Electron API
       const result = await window.electronAPI.readFile(filePath);
 
@@ -30,10 +38,20 @@ class PlanService {
       // Validate plan structure
       this.validate(planData);
 
-      // Save plan
-      const plans = await this.getAll();
-      plans.push(planData);
-      await storageService.set('plans', plans);
+      // Save plan to user's data
+      const plans = await this.getAll(userId);
+
+      // Check if plan already exists for this user
+      const existingIndex = plans.findIndex(p => p.id === planData.id);
+      if (existingIndex >= 0) {
+        // Update existing plan
+        plans[existingIndex] = planData;
+      } else {
+        // Add new plan
+        plans.push(planData);
+      }
+
+      await storageService.setUserData(userId, 'plans', plans);
 
       return planData;
     } catch (error) {
@@ -61,10 +79,13 @@ class PlanService {
     return true;
   }
 
-  async delete(planId) {
-    const plans = await this.getAll();
+  async delete(userId, planId) {
+    if (!userId) {
+      throw new Error('Kullanıcı ID gerekli');
+    }
+    const plans = await this.getAll(userId);
     const filtered = plans.filter(p => p.id !== planId);
-    await storageService.set('plans', filtered);
+    await storageService.setUserData(userId, 'plans', filtered);
     return true;
   }
 
@@ -72,8 +93,8 @@ class PlanService {
     return await userService.update(userId, { activePlanId: planId });
   }
 
-  async getTodayProgram(planId) {
-    const plan = await this.getById(planId);
+  async getTodayProgram(userId, planId) {
+    const plan = await this.getById(userId, planId);
     if (!plan) return null;
 
     const today = new Date();
