@@ -12,6 +12,7 @@ const QuestionSetInput = ({ onAdd }) => {
   const [subject, setSubject] = useState('');
   const [correct, setCorrect] = useState('');
   const [wrong, setWrong] = useState('');
+  const [empty, setEmpty] = useState('');
   const [penaltyEnabled, setPenaltyEnabled] = useState(true);
   const [error, setError] = useState('');
 
@@ -26,6 +27,7 @@ const QuestionSetInput = ({ onAdd }) => {
   const handleAdd = () => {
     const correctNum = parseInt(correct) || 0;
     const wrongNum = parseInt(wrong) || 0;
+    const emptyNum = parseInt(empty) || 0;
 
     // Validation
     if (!subject) {
@@ -45,11 +47,14 @@ const QuestionSetInput = ({ onAdd }) => {
     }
 
     const net = calculateNet(correctNum, wrongNum, penaltyEnabled);
+    const total = correctNum + wrongNum + emptyNum;
 
     onAdd({
       subject,
       correct: correctNum,
       wrong: wrongNum,
+      empty: emptyNum,
+      total,
       penaltyEnabled,
       net,
     });
@@ -57,6 +62,7 @@ const QuestionSetInput = ({ onAdd }) => {
     // Reset form
     setCorrect('');
     setWrong('');
+    setEmpty('');
     setError('');
   };
 
@@ -70,8 +76,8 @@ const QuestionSetInput = ({ onAdd }) => {
     <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
       <h4 className="font-semibold text-gray-900 mb-3">Soru Seti Ekle</h4>
 
-      <div className="grid grid-cols-2 gap-3 mb-3">
-        <div className="col-span-2">
+      <div className="space-y-3 mb-3">
+        <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Ders
           </label>
@@ -86,23 +92,34 @@ const QuestionSetInput = ({ onAdd }) => {
           </select>
         </div>
 
-        <Input
-          label="Doğru"
-          type="number"
-          value={correct}
-          onChange={(e) => setCorrect(e.target.value)}
-          placeholder="0"
-          min="0"
-        />
+        <div className="grid grid-cols-3 gap-3">
+          <Input
+            label="Doğru"
+            type="number"
+            value={correct}
+            onChange={(e) => setCorrect(e.target.value)}
+            placeholder="0"
+            min="0"
+          />
 
-        <Input
-          label="Yanlış"
-          type="number"
-          value={wrong}
-          onChange={(e) => setWrong(e.target.value)}
-          placeholder="0"
-          min="0"
-        />
+          <Input
+            label="Yanlış"
+            type="number"
+            value={wrong}
+            onChange={(e) => setWrong(e.target.value)}
+            placeholder="0"
+            min="0"
+          />
+
+          <Input
+            label="Boş"
+            type="number"
+            value={empty}
+            onChange={(e) => setEmpty(e.target.value)}
+            placeholder="0"
+            min="0"
+          />
+        </div>
       </div>
 
       <div className="mb-3">

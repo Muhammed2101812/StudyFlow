@@ -62,11 +62,7 @@ const StudyLogForm = ({ selectedDate, existingLog, onSaved }) => {
       return;
     }
 
-    if (questionSets.length === 0) {
-      setError('En az bir soru seti eklemelisiniz');
-      toast.error('En az bir soru seti eklemelisiniz');
-      return;
-    }
+    // Question sets are now optional - user can just log study time without questions
 
     setSaving(true);
 
@@ -78,6 +74,11 @@ const StudyLogForm = ({ selectedDate, existingLog, onSaved }) => {
       completed,
       notes,
     };
+
+    // If editing, preserve the ID
+    if (existingLog?.id) {
+      logData.id = existingLog.id;
+    }
 
     const result = await saveStudyLog(logData);
 
@@ -131,7 +132,12 @@ const StudyLogForm = ({ selectedDate, existingLog, onSaved }) => {
 
       {/* Question Sets */}
       <div>
-        <h4 className="font-medium text-gray-900 mb-2">Soru Setleri</h4>
+        <h4 className="font-medium text-gray-900 mb-1">
+          Soru Setleri <span className="text-sm font-normal text-gray-500">(Opsiyonel)</span>
+        </h4>
+        <p className="text-xs text-gray-500 mb-3">
+          Sadece konu çalıştıysanız soru seti eklemenize gerek yok
+        </p>
 
         {questionSets.length > 0 && (
           <div className="space-y-2 mb-3">
@@ -148,7 +154,7 @@ const StudyLogForm = ({ selectedDate, existingLog, onSaved }) => {
                   <div className="flex-1">
                     <div className="font-medium text-gray-900">{set.subject}</div>
                     <div className="text-sm text-gray-600">
-                      D: {set.correct} • Y: {set.wrong} • Net: {set.net.toFixed(2)}
+                      D: {set.correct} • Y: {set.wrong} • B: {set.empty} • Net: {set.net.toFixed(2)}
                     </div>
                   </div>
                 </div>

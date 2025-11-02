@@ -42,9 +42,238 @@ planService methods (getAll, delete, assignToUser, getTodayProgram) were not asy
 3. PlanContext already properly handles async operations
 
 **Testing:**
-- [ ] Plan import should work now
-- [ ] Empty plans state handled correctly
-- [ ] Plan switching and deletion should work
+- [x] Plan import works correctly
+- [x] Empty plans state handled correctly
+- [x] Plan switching and deletion works
+
+---
+
+### Bug #8: Critical - Plans Not User-Specific ✅ FIXED
+
+**Severity:** Critical (Data Isolation Failure)
+**Status:** Fixed
+**Date Found:** 02 Kasım 2025
+**Date Fixed:** 02 Kasım 2025
+**Reported By:** User (Manual Testing - Second Testing Round)
+
+**Description:**
+When creating a new user, the user could see plans imported by other users. Plans were stored globally instead of per-user, breaking data isolation.
+
+**Root Cause:**
+planService methods didn't accept userId parameter. All plans were stored in a single global array instead of per-user storage.
+
+**Files Affected:**
+- `src/renderer/services/planService.js` - All methods
+- `src/renderer/contexts/PlanContext.jsx` - All service calls
+
+**Fix Applied:**
+1. Modified planService to accept userId parameter in all methods:
+   - `getAll(userId)` - Get user-specific plans
+   - `import(userId, filePath)` - Import plan for specific user
+   - `delete(userId, planId)` - Delete from user's plans
+   - `assignToUser(userId, planId)` - Assign plan to specific user
+
+2. Updated PlanContext to pass currentUser.id to all planService calls
+
+**Testing:**
+- [x] Each user has their own plans
+- [x] Plan imports are user-specific
+- [x] Plan switching works per user
+- [x] No plan data leaks between users
+
+---
+
+### Bug #9: Critical - showToast Not Working ✅ FIXED
+
+**Severity:** Critical (Toast Notifications Broken)
+**Status:** Fixed
+**Date Found:** 02 Kasım 2025
+**Date Fixed:** 02 Kasım 2025
+**Reported By:** User (Console Errors)
+
+**Description:**
+Multiple pages crashed with "showToast is not a function" error. Toast notifications were not working in ExamForm, ExamList, and StatsPage.
+
+**Console Errors:**
+```
+TypeError: showToast is not a function
+  at ExamForm
+  at ExamList
+  at StatsPage
+```
+
+**Root Cause:**
+ToastContext exported `toast` object (with methods like toast.success(), toast.error()) but some components expected a `showToast` function for backward compatibility.
+
+**Files Affected:**
+- `src/renderer/contexts/ToastContext.jsx` - Provider exports
+
+**Fix Applied:**
+Added `showToast` wrapper function to ToastContext:
+```javascript
+const showToast = (message, type = 'info', duration = 3000) => {
+  addToast(message, type, duration);
+};
+
+return (
+  <ToastContext.Provider value={{ toast, showToast, removeToast }}>
+    {children}
+    <ToastContainer toasts={toasts} onRemove={removeToast} />
+  </ToastContext.Provider>
+);
+```
+
+**Testing:**
+- [x] ExamForm toasts work
+- [x] ExamList toasts work
+- [x] StatsPage toasts work
+- [x] No console errors
+
+---
+
+### Bug #10: Low - Duplicate Plan Key Warning ✅ FIXED
+
+**Severity:** Low (Console Warning)
+**Status:** Fixed (Resolved by Bug #8 fix)
+**Date Found:** 02 Kasım 2025
+**Date Fixed:** 02 Kasım 2025
+**Reported By:** User (Console Warning)
+
+**Description:**
+Console warning: "Encountered two children with the same key, 'kpss-2026-detayli'"
+
+**Root Cause:**
+Same plan IDs appearing in multiple users' plan lists because plans weren't user-specific.
+
+**Fix:**
+Automatically resolved when Bug #8 was fixed (user-specific plans).
+
+**Testing:**
+- [x] No duplicate key warnings
+- [x] Each plan has unique key per user
+
+---
+
+### Bug #11: Critical - Export Service Crash ✅ FIXED
+
+**Severity:** Critical (Data Export Broken)
+**Status:** Fixed
+**Date Found:** 02 Kasım 2025
+**Date Fixed:** 02 Kasım 2025
+**Reported By:** User (Export Test)
+
+**Description:**
+Export functionality crashed with "progress.reduce is not a function" error.
+
+**Root Cause:**
+Missing await on async service calls. progressService.getAll() and examService.getAll() returned Promises instead of arrays.
+
+**Files Affected:**
+- `src/renderer/services/exportService.js` - exportAllData method
+
+**Fix Applied:**
+1. Added await to async calls:
+```javascript
+const progress = await progressService.getAll(userId);
+const exams = await examService.getAll(userId);
+```
+
+2. Added array validation before reduce:
+```javascript
+const progressArray = Array.isArray(progress) ? progress : [];
+const examsArray = Array.isArray(exams) ? exams : [];
+
+statistics: {
+  totalStudyDays: progressArray.length,
+  totalExams: examsArray.length,
+  totalHours: progressArray.reduce((sum, p) => sum + (p.duration || 0), 0),
+}
+```
+
+**Testing:**
+- [x] Export to JSON works
+- [x] Export cancellation works
+- [x] All data exported correctly
+- [x] No console errors
+
+---
+
+### Bug #12: Critical - Study Logs Overwriting Same Day Entries ✅ FIXED
+
+**Severity:** Critical (Data Loss)
+**Status:** Fixed
+**Date Found:** 02 Kasım 2025
+**Date Fixed:** 02 Kasım 2025
+**Reported By:** User (Manual Testing - Study Log Feature)
+
+**Description:**
+When adding multiple study sessions on the same day, new entries would overwrite previous entries. User reported:
+- Added 1 hour Tarih → Stats showed 1 hour total ✓
+- Added 2 hours Matematik → Stats showed 2 hours total (expected 3 hours) ✗
+
+**Root Cause:**
+progressService.saveStudyLog() used date as unique identifier. When saving a log for the same date, it would find existing entry by date and update it instead of creating a new record.
+
+**Files Affected:**
+- `src/renderer/services/progressService.js` - saveStudyLog, getByDate, updateStudyLog, deleteStudyLog
+- `src/renderer/hooks/useProgress.js` - getByDate, updateStudyLog, deleteStudyLog
+- `src/renderer/pages/StudyLogPage.jsx` - Complete UI redesign
+- `src/renderer/components/study/StudyLogForm.jsx` - ID preservation
+
+**Fix Applied:**
+1. **progressService.js:**
+   - Added UUID to every study log entry
+   - Changed `getByDate()` to return array instead of single object
+   - Added `getById(userId, id)` method
+   - Modified `saveStudyLog()` to use ID for updates, always create new if no ID
+   - Changed `updateStudyLog(userId, id, updates)` - ID parameter instead of date
+   - Changed `deleteStudyLog(userId, id)` - ID parameter instead of date
+   - Sort by date AND createdAt timestamp
+
+2. **useProgress.js:**
+   - Updated `getByDate()` to return array
+   - Changed `updateStudyLog()` and `deleteStudyLog()` to use ID
+
+3. **StudyLogPage.jsx:**
+   - Complete UI redesign to show multiple logs per day
+   - Each log displayed in separate card
+   - "Yeni Çalışma Ekle" button
+   - Individual "Düzenle" and "Sil" buttons per log
+   - Empty state support
+
+4. **StudyLogForm.jsx:**
+   - Made question sets optional (user can log study time without questions)
+   - Preserve ID when editing (existingLog?.id)
+   - Added "(Opsiyonel)" label to question sets section
+
+**Key Changes:**
+```javascript
+// Before: Date-based (overwrites)
+const existingIndex = allProgress.findIndex(p => p.date === dateStr);
+
+// After: ID-based (creates new)
+const studyLog = {
+  id: logData.id || uuidv4(),
+  date: dateStr,
+  // ... rest of fields
+};
+
+if (isUpdate) {
+  // Update by ID
+  const existingIndex = allProgress.findIndex(p => p.id === logData.id);
+} else {
+  // Always create new
+  allProgress.push(studyLog);
+}
+```
+
+**Testing:**
+- [x] Multiple study sessions on same day work correctly
+- [x] Each session has unique ID
+- [x] Total hours calculated correctly in stats
+- [x] Edit/delete works per session
+- [x] Question sets are optional
+- [x] UI shows all sessions for selected date
 
 ---
 
@@ -402,9 +631,14 @@ ReferenceError: dragEvent is not defined
 | 4 | Critical | Fixed | 2 files | Verified |
 | 5 | Critical | Fixed | 2 files | Verified |
 | 6 | Critical | Fixed | 2 files | Verified |
-| 7 | Critical | Fixed | 2 files | Pending verification |
+| 7 | Critical | Fixed | 2 files | Verified |
+| 8 | Critical | Fixed | 2 files | Verified |
+| 9 | Critical | Fixed | 1 file | Verified |
+| 10 | Low | Fixed | 1 file | Verified |
+| 11 | Critical | Fixed | 1 file | Verified |
+| 12 | Critical | Fixed | 4 files | Verified |
 
-**Total Bugs Fixed:** 7 Critical
+**Total Bugs Fixed:** 12 (11 Critical, 1 Low)
 **Total Warnings:** 3 Low priority
 
 ---
@@ -462,6 +696,6 @@ After fixes, verify:
 
 ---
 
-**Last Updated:** 01 Kasım 2025 22:15
+**Last Updated:** 02 Kasım 2025 13:20
 **Updated By:** Claude Code
-**Next Update:** After manual testing verification of Bug #7 (Plan Import)
+**Status:** All critical bugs fixed and verified. Application ready for production build.

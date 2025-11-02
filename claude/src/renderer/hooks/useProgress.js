@@ -46,13 +46,13 @@ export const useProgress = () => {
     }
   };
 
-  const updateStudyLog = async (date, updates) => {
+  const updateStudyLog = async (id, updates) => {
     if (!currentUser) {
       return { success: false, error: 'Kullanıcı bulunamadı' };
     }
 
     try {
-      const updated = await progressService.updateStudyLog(currentUser.id, date, updates);
+      const updated = await progressService.updateStudyLog(currentUser.id, id, updates);
       await loadProgress(); // Refresh data
       return { success: true, data: updated };
     } catch (error) {
@@ -60,13 +60,13 @@ export const useProgress = () => {
     }
   };
 
-  const deleteStudyLog = async (date) => {
+  const deleteStudyLog = async (id) => {
     if (!currentUser) {
       return { success: false, error: 'Kullanıcı bulunamadı' };
     }
 
     try {
-      await progressService.deleteStudyLog(currentUser.id, date);
+      await progressService.deleteStudyLog(currentUser.id, id);
       await loadProgress(); // Refresh data
       return { success: true };
     } catch (error) {
@@ -75,10 +75,10 @@ export const useProgress = () => {
   };
 
   const getByDate = (date) => {
-    if (!currentUser || !progress) return null;
-    // Search through already-loaded progress array
+    if (!currentUser || !progress) return [];
+    // Search through already-loaded progress array - returns all logs for that date
     const dateStr = date instanceof Date ? format(date, 'yyyy-MM-dd') : date;
-    return progress.find(p => p.date === dateStr) || null;
+    return progress.filter(p => p.date === dateStr);
   };
 
   const getSubjectStats = async (subject) => {

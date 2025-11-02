@@ -29,11 +29,15 @@ export default function ExamForm({ examToEdit, onSuccess, onCancel }) {
   const [weakTopics, setWeakTopics] = useState('');
   const [notes, setNotes] = useState('');
 
-  // Initialize results from plan subjects
+  // Initialize results from plan subjects or default KPSS subjects
   useEffect(() => {
-    if (currentPlan?.subjects && Object.keys(results).length === 0) {
+    if (Object.keys(results).length === 0) {
       const initialResults = {};
-      currentPlan.subjects.forEach((subject) => {
+
+      // Use plan subjects if available, otherwise use default KPSS subjects
+      const subjects = currentPlan?.subjects || Object.keys(SUBJECT_QUESTIONS);
+
+      subjects.forEach((subject) => {
         const totalQuestions = SUBJECT_QUESTIONS[subject] || 0;
         initialResults[subject] = {
           correct: 0,

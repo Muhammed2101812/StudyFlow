@@ -396,13 +396,22 @@ export default function ExamList({ onEdit }) {
             setShowDeleteModal(false);
             setExamToDelete(null);
           }}
-          title="Denemeyi Sil"
         >
-          <div className="space-y-4">
+          <Modal.Header
+            onClose={() => {
+              setShowDeleteModal(false);
+              setExamToDelete(null);
+            }}
+          >
+            Denemeyi Sil
+          </Modal.Header>
+          <Modal.Body>
             <p className="text-gray-700">
               <strong>{examToDelete.name}</strong> isimli denemeyi silmek istediğinize emin
               misiniz? Bu işlem geri alınamaz.
             </p>
+          </Modal.Body>
+          <Modal.Footer>
             <div className="flex gap-3 justify-end">
               <Button
                 variant="ghost"
@@ -417,7 +426,7 @@ export default function ExamList({ onEdit }) {
                 Sil
               </Button>
             </div>
-          </div>
+          </Modal.Footer>
         </Modal>
       )}
     </div>

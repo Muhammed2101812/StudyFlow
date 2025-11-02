@@ -1,5 +1,6 @@
 import storageService from './storageService';
 import { format } from 'date-fns';
+import { v4 as uuidv4 } from 'uuid';
 
 class ProgressService {
   async getAll(userId) {
@@ -14,7 +15,12 @@ class ProgressService {
   async getByDate(userId, date) {
     const dateStr = format(new Date(date), 'yyyy-MM-dd');
     const allProgress = await this.getAll(userId);
-    return allProgress.find(p => p.date === dateStr) || null;
+    return allProgress.filter(p => p.date === dateStr);
+  }
+
+  async getById(userId, id) {
+    const allProgress = await this.getAll(userId);
+    return allProgress.find(p => p.id === id) || null;
   }
 
   async saveStudyLog(userId, logData) {
@@ -22,34 +28,44 @@ class ProgressService {
       const allProgress = await this.getAll(userId);
       const dateStr = format(new Date(logData.date), 'yyyy-MM-dd');
 
-      // Check if entry already exists for this date
-      const existingIndex = allProgress.findIndex(p => p.date === dateStr);
+      // If logData has an ID, it's an update; otherwise, it's a new entry
+      const isUpdate = !!logData.id;
 
       const studyLog = {
+        id: logData.id || uuidv4(),
         date: dateStr,
         topic: logData.topic || '',
         duration: parseFloat(logData.duration) || 0,
         questionSets: logData.questionSets || [],
         completed: logData.completed || false,
         notes: logData.notes || '',
-        createdAt: new Date().toISOString(),
+        createdAt: logData.createdAt || new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };
 
-      if (existingIndex !== -1) {
-        // Update existing entry
-        allProgress[existingIndex] = {
-          ...allProgress[existingIndex],
-          ...studyLog,
-          createdAt: allProgress[existingIndex].createdAt, // Keep original creation time
-        };
+      if (isUpdate) {
+        // Update existing entry by ID
+        const existingIndex = allProgress.findIndex(p => p.id === logData.id);
+        if (existingIndex !== -1) {
+          allProgress[existingIndex] = {
+            ...allProgress[existingIndex],
+            ...studyLog,
+            createdAt: allProgress[existingIndex].createdAt, // Keep original creation time
+          };
+        } else {
+          throw new Error('Güncellenecek kayıt bulunamadı');
+        }
       } else {
-        // Add new entry
+        // Add new entry (always creates a new record)
         allProgress.push(studyLog);
       }
 
-      // Sort by date (newest first)
-      allProgress.sort((a, b) => new Date(b.date) - new Date(a.date));
+      // Sort by date and createdAt (newest first)
+      allProgress.sort((a, b) => {
+        const dateCompare = new Date(b.date) - new Date(a.date);
+        if (dateCompare !== 0) return dateCompare;
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
 
       await storageService.setUserData(userId, 'progress', allProgress);
       return studyLog;
@@ -58,11 +74,10 @@ class ProgressService {
     }
   }
 
-  async updateStudyLog(userId, date, updates) {
+  async updateStudyLog(userId, id, updates) {
     try {
       const allProgress = await this.getAll(userId);
-      const dateStr = format(new Date(date), 'yyyy-MM-dd');
-      const index = allProgress.findIndex(p => p.date === dateStr);
+      const index = allProgress.findIndex(p => p.id === id);
 
       if (index === -1) {
         throw new Error('Kayıt bulunamadı');
@@ -81,11 +96,10 @@ class ProgressService {
     }
   }
 
-  async deleteStudyLog(userId, date) {
+  async deleteStudyLog(userId, id) {
     try {
       const allProgress = await this.getAll(userId);
-      const dateStr = format(new Date(date), 'yyyy-MM-dd');
-      const filtered = allProgress.filter(p => p.date !== dateStr);
+      const filtered = allProgress.filter(p => p.id !== id);
 
       await storageService.setUserData(userId, 'progress', filtered);
       return true;
